@@ -107,3 +107,8 @@ MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP0005
 最终 lake build 退出0（827 jobs）；三个最终定理公理依赖均只有 propext、Classical.choice、Quot.sound。原始输出 docs/validation/final-build.log。项目 Lean 源码无 sorry、admit、sorryAx、axiom、unsafe、native_decide 匹配；三个多余 DecidableEq 参数警告无碍证明。README、theorem_mapping、proof_dependency 已更新为完整结果；最终复现与语义检查见 docs/FINAL_VERIFICATION.md。
 
 远程情况：G4 f15efde、G5 7e9ec59 已推送；主定理363d59f第一次push遭遇网络连接重置，源码和提交未丢失。最终保存后重试推送全部提交并核对远端。当前数学与Lean证明目标已达到，完成状态只待最终提交和私有远程备份确认；不执行公开或奖项提交。
+
+
+## 最终远程确认 — 已完成
+
+2026-09-18：GitHub API 再次确认 yqian215-arch/jsp-000513-lean 为 private=true、visibility=private。完整证明及最终审计提交 79076f593efaba56923ffaeef2de935757090e3b 的本地 HEAD 与远端 refs/heads/phase0-local 完全一致，工作区干净。主定理363d59f也已包含在远端历史中；此前连接重置已恢复。此后的记录提交仅保存本段备份确认。完整形式化、构建、公理审计、本地提交及私有备份要求均已完成。无待证明的主命题依赖，未公开或提交官方奖项。
