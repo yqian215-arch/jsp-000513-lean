@@ -23,3 +23,9 @@
 此前 C5 负面 PoC 已通过；继续前重新构建并保存审计输出。远程初始提交为 535de844126b4b977e6615c6eb32d80a0b226302。当前 Git 无作者身份配置，本地提交使用明确的代理身份 `Codex <codex@localhost>`，不冒用用户身份、不配置远程凭据。
 
 阶段0结果：lake build 退出0；六个已证引理的公理只有 propext、Classical.choice、Quot.sound（或其子集）。原始输出 docs/validation/stage0-build.log。基线保存后立即进入阶段1。
+
+## 阶段 1 — 已完成
+
+新增任意颜色类型上的普通列表染色接口及其与一重集合染色的双向等价。完成 DHS19 Lemma 3 正面半句：任意各有两色的列表、指定非邻接两顶点列表交至多一色时，五边形可染。证明直接构造贪心选色并使用图反射，不将任意列表限制成固定调色板。
+
+验证：lake build 退出0（804 jobs）；新桥梁与 half_list_colorable 的公理均仅 propext、Classical.choice、Quot.sound。日志 docs/validation/stage1-build.log。普通导入路径与隐式集合参数的编译错误已修复，无数学假设更改。下一阶段自动开始 G1 / Corollary 4。
