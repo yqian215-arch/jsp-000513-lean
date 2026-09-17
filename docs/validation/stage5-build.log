@@ -1,0 +1,50 @@
+⚠ [803/816] Replayed JSP000513.FinsetTools
+warning: JSP000513/FinsetTools.lean:19:0: automatically included section variable(s) unused in theorem `JSP000513.exists_mem_of_card_lt`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [813/816] Replayed JSP000513.NineAttachment
+warning: JSP000513/NineAttachment.lean:16:0: automatically included section variable(s) unused in theorem `JSP000513.Triangle.vector_coloring`:
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: JSP000513/NineAttachment.lean:64:0: automatically included section variable(s) unused in theorem `JSP000513.Nine.combine_coloring`:
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [814/816] Built JSP000513.G4 (2.6s)
+ℹ [815/816] Built JSP000513 (1.0s)
+info: JSP000513.lean:11:0: 'JSP000513.C5.lists_card' depends on axioms: [propext, Quot.sound]
+info: JSP000513.lean:12:0: 'JSP000513.C5.pairChoices_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:13:0: 'JSP000513.C5.mem_pairChoices_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:14:0: 'JSP000513.C5.no_compatible_choices' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:15:0: 'JSP000513.C5.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:16:0: 'JSP000513.C5.not_ABChoosable_four_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:17:0: 'JSP000513.listColorable_iff_multicolorable_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:18:0: 'JSP000513.C5.half_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:19:0: 'JSP000513.G1.half_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:20:0: 'JSP000513.G1.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:22:0: 'JSP000513.C5.colorable_or_uniform_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:23:0: 'JSP000513.C5.colorable_erase_of_nonuniform_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:24:0: 'JSP000513.C5.extend_uniform_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:25:0: 'JSP000513.C5.not_twofold_palette_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:26:0: 'JSP000513.G2.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:27:0: 'JSP000513.G2.twofold_hits_special' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:30:0: 'JSP000513.Seven.flexible_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:31:0: 'JSP000513.Seven.greedy_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:32:0: 'JSP000513.Seven.twofold_terminal_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:33:0: 'JSP000513.G3.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:34:0: 'JSP000513.G3.twofold_terminal_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:37:0: 'JSP000513.two_roots_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:38:0: 'JSP000513.avoid_two_bad_deletions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:39:0: 'JSP000513.Nine.flexible_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:40:0: 'JSP000513.Nine.greedy_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:41:0: 'JSP000513.G4.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:42:0: 'JSP000513.G4.twofold_terminals_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (816 jobs).

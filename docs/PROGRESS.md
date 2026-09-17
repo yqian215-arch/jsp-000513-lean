@@ -77,3 +77,9 @@ lake build 退出0（813 jobs）；五项附件/G3审计只有 propext、Classic
 后续 Lemma 8/G5：G4与G1只共享v1,v3，增加两个末端到v2,v4和x,y的四条边；G1相关四个列表增加{7,8}。最终Theorem2按K4所有二重着色索引G5副本并补齐八元列表。最终还须完成有限颜色重命名桥梁与主statement语义审计。
 
 本地Git登录已完成，GitHub API已确认private=true及push权限。可直接 git push origin phase0-local。不要依赖当前404的GitHub连接器。不要打印凭据。所有已验证阶段均需保留并持续推送。未进行任何发布或官方提交。
+
+## 阶段 5 — 已完成（DHS19 Lemma 7 / G4）
+
+额度恢复后从 cd0a418 继续。新增 TriangleTools 的两个选色引理和坏删除至多一个的基数证明；NineAttachment 用三个三角形实现任意新边界预着色的扩展与固定旧边界的贪心扩展。G4 为 G3 与九顶点附件的连接，已证明 StrongRelaxed 和两个末端均强制为{7,8}，未使用额外数学假设。
+
+lake build 退出0（816 jobs）。新增六项公理审计仅 propext、Classical.choice、Quot.sound，见 docs/validation/stage5-build.log。源码 TriangleTools.lean、NineAttachment.lean、G4.lean。继续 Lemma 8 的 G5：共享 G1 的0、2与G4的 first、third，其余五点另建；先组合半列表正面证明，再把负面染色限制到 G1。远程备份沿用已验证为 Private 的 origin/phase0-local；未消耗重置券。
