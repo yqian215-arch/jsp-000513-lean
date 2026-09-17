@@ -1,0 +1,9 @@
+ℹ [800/801] Replayed JSP000513
+info: JSP000513.lean:5:0: 'JSP000513.C5.lists_card' depends on axioms: [propext, Quot.sound]
+info: JSP000513.lean:6:0: 'JSP000513.C5.pairChoices_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:7:0: 'JSP000513.C5.mem_pairChoices_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:8:0: 'JSP000513.C5.no_compatible_choices' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:9:0: 'JSP000513.C5.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:10:0: 'JSP000513.C5.not_ABChoosable_four_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (801 jobs).
+EXIT_CODE=0
