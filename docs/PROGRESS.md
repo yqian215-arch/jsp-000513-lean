@@ -35,3 +35,11 @@
 新增任意颜色类型上的普通列表染色接口及其与一重集合染色的双向等价。完成 DHS19 Lemma 3 正面半句：任意各有两色的列表、指定非邻接两顶点列表交至多一色时，五边形可染。证明直接构造贪心选色并使用图反射，不将任意列表限制成固定调色板。
 
 验证：lake build 退出0（804 jobs）；新桥梁与 half_list_colorable 的公理均仅 propext、Classical.choice、Quot.sound。日志 docs/validation/stage1-build.log。普通导入路径与隐式集合参数的编译错误已修复，无数学假设更改。下一阶段自动开始 G1 / Corollary 4。
+
+## 阶段 2 — 已完成
+
+按论文实现七顶点 G1（五边形加 v1-x-y-v3 路径）及精确列表。已证明任意 half-list、L(v1)=L(v3) 时的普通列表可染性，以及固定列表不存在二重染色；负面证明从 y、x 的强制选色归约到已证 C5 障碍。新增一般有限集选择引理，未限制任意列表的调色板。
+
+验证：lake build 退出0（806 jobs）；G1 两项定理公理仅 propext、Classical.choice、Quot.sound。日志 docs/validation/stage2-build.log。下一步进入 Lemma 5 / G2 及 relaxed 接口。
+
+远程备份更新：用户已确认改为 Private 并重授权。连接器仍返回404；本地 Git 的非交互检查确认无可用凭据，已启动 Git Credential Manager 设备登录（尚未返回授权码/完成状态）。阶段提交均已本地保存，尚无成功 push 记录，不得误报远程备份完成。
