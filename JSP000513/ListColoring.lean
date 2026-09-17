@@ -51,4 +51,13 @@ theorem ListColorable.mono {V : Type u} {Color : Type v}
   obtain ⟨f, hm, he⟩ := h
   exact ⟨f, fun x => hLK x (hm x), he⟩
 
+/-- Pull a coloring back along a graph homomorphism. -/
+theorem ListColorable.comap {V W : Type u} {Color : Type v}
+    {G : SimpleGraph V} {H : SimpleGraph W} {L : W → Finset Color}
+    (h : ListColorable H L) (f : V → W)
+    (hf : ∀ x y, G.Adj x y → H.Adj (f x) (f y)) :
+    ListColorable G (L ∘ f) := by
+  obtain ⟨c, hm, he⟩ := h
+  exact ⟨c ∘ f, fun x => hm (f x), fun x y hxy => he _ _ (hf x y hxy)⟩
+
 end JSP000513

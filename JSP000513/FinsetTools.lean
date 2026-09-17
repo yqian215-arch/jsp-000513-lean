@@ -6,6 +6,16 @@ namespace JSP000513
 universe u
 variable {α : Type u} [DecidableEq α]
 
+theorem exists_mem_avoiding_pair (S : Finset α) (hS : 3 ≤ S.card) (a b : α) :
+    ∃ c ∈ S, c ≠ a ∧ c ≠ b := by
+  have hnot : ¬ S ⊆ ({a,b} : Finset α) := by
+    intro h
+    have hc := Finset.card_le_card h
+    have hp := Finset.card_pair_eq_one_or_two (a := a) (b := b)
+    omega
+  obtain ⟨c,hc,hn⟩ := Finset.not_subset.mp hnot
+  exact ⟨c,hc,fun h => hn (by simp [h]),fun h => hn (by simp [h])⟩
+
 theorem exists_pair_avoiding (S : Finset α) (hS : 3 ≤ S.card) (a : α) :
     ∃ T : Finset α, T ⊆ S ∧ T.card = 2 ∧ a ∉ T := by
   have hcard : 2 ≤ (S.erase a).card := by

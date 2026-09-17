@@ -43,3 +43,11 @@
 验证：lake build 退出0（806 jobs）；G1 两项定理公理仅 propext、Classical.choice、Quot.sound。日志 docs/validation/stage2-build.log。下一步进入 Lemma 5 / G2 及 relaxed 接口。
 
 远程备份更新：用户已确认改为 Private 并重授权。连接器仍返回404；本地 Git 的非交互检查确认无可用凭据，已启动 Git Credential Manager 设备登录（尚未返回授权码/完成状态）。阶段提交均已本地保存，尚无成功 push 记录，不得误报远程备份完成。
+
+远程备份已恢复：本地 Git Credential Manager 登录成功；通过 GitHub API 使用本地 Git 凭据核实 private=true、visibility=private、push_permission=true。首次 push 已成功，远端分支 phase0-local 包含截至 8f58279 的全部已验证提交。后续仍只推送已验证阶段，不公开仓库或提交奖项。连接器404不再阻碍本地 Git 备份。
+
+## 阶段 3a — 已完成（Lemma 5 前置）
+
+新增五边形通用定理：所有列表至少两色时，或者可染，或者所有列表恰是同一二元集；非一致三元列表同时删除任一颜色后仍可染；公共三元列表可扩展两个非邻接顶点的任意预着色；四颜色调色板不可能给五边形每点分配两色。全部对任意颜色类型证明，未调用未形式化的分数色数结论。
+
+lake build 退出0（807 jobs），四个主要新定理公理仅标准三项；原始审计 docs/validation/stage3a-build.log。继续 G2 构造与 relaxed 性质。
