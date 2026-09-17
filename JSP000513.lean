@@ -3,6 +3,7 @@ import JSP000513.C5Obstruction
 import JSP000513.C5Positive
 import JSP000513.G1
 import JSP000513.C5General
+import JSP000513.G2
 
 -- Phase 0 audit: the full target propositions above have no proof.
 #print axioms JSP000513.C5.lists_card
@@ -20,4 +21,6 @@ import JSP000513.C5General
 #print axioms JSP000513.C5.colorable_erase_of_nonuniform_three
 #print axioms JSP000513.C5.extend_uniform_three
 #print axioms JSP000513.C5.not_twofold_palette_four
+#print axioms JSP000513.G2.half_list_relaxed
+#print axioms JSP000513.G2.twofold_hits_special
 
