@@ -6,6 +6,7 @@ import JSP000513.C5General
 import JSP000513.G2
 import JSP000513.G3
 import JSP000513.G4
+import JSP000513.G5
 
 -- Phase 0 audit: the full target propositions above have no proof.
 #print axioms JSP000513.C5.lists_card
@@ -40,4 +41,8 @@ import JSP000513.G4
 #print axioms JSP000513.Nine.greedy_extension
 #print axioms JSP000513.G4.half_list_relaxed
 #print axioms JSP000513.G4.twofold_terminals_forced
+
+
+#print axioms JSP000513.G5.half_list_colorable
+#print axioms JSP000513.G5.not_listMulticolorable
 

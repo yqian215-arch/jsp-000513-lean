@@ -83,3 +83,11 @@ lake build 退出0（813 jobs）；五项附件/G3审计只有 propext、Classic
 额度恢复后从 cd0a418 继续。新增 TriangleTools 的两个选色引理和坏删除至多一个的基数证明；NineAttachment 用三个三角形实现任意新边界预着色的扩展与固定旧边界的贪心扩展。G4 为 G3 与九顶点附件的连接，已证明 StrongRelaxed 和两个末端均强制为{7,8}，未使用额外数学假设。
 
 lake build 退出0（816 jobs）。新增六项公理审计仅 propext、Classical.choice、Quot.sound，见 docs/validation/stage5-build.log。源码 TriangleTools.lean、NineAttachment.lean、G4.lean。继续 Lemma 8 的 G5：共享 G1 的0、2与G4的 first、third，其余五点另建；先组合半列表正面证明，再把负面染色限制到 G1。远程备份沿用已验证为 Private 的 origin/phase0-local；未消耗重置券。
+
+## 阶段 6 — 已完成（DHS19 Lemma 8 / G5）
+
+G5 以 G4.Vertex ⊕ Fin 5 编码37顶点，G1 的 v1,v3 分别共享 G4 的 first,third。另五点为 v2,v4,v5,x,y；额外四边及四个增添{7,8}的列表已显式实现。embed_adj 核查 G1 原边全部保留，combine_coloring 组合一致的两部分染色。
+
+已证明任意半列表可染：G4 第一分支配合 G1 增大半列表上的预着色扩展；第二分支先删除两个末端的固定色，再选精确大小子列表应用 G1 正面定理。负面用 G4 两末端强制{7,8}，删去增添色并限制到 G1，得到矛盾。
+
+lake build 退出0（817 jobs），两项主定理审计只有标准三公理，日志 docs/validation/stage6-build.log。继续最终 Theorem 2：K4 的所有合法二重着色索引 G5 副本，按 halfSizes 补邻居及补颜色；需证明半列表大小在2至4之间、固定颜色均在1至8、统一后的八元列表不可二重染色及任意四元列表可染。完整主定理尚在实现中。
