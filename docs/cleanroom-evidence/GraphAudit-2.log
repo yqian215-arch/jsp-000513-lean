@@ -1,0 +1,7 @@
+"Checking expected C5: 5 vertices, 5 undirected edges, all lists, bijection"
+"Checking expected G1: 7 vertices, 8 undirected edges, all lists, bijection"
+"Checking expected G2: 9 vertices, 14 undirected edges, all lists, bijection"
+"Checking expected G3: 23 vertices, 36 undirected edges, all lists, bijection"
+"Checking expected G4: 32 vertices, 49 undirected edges, all lists, bijection"
+"Checking expected G5: 37 vertices, 61 undirected edges, all lists, bijection"
+Cleanroom.indexWitness : Final.Index

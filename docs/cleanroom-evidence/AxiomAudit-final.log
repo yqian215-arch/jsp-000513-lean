@@ -1,0 +1,32 @@
+'JSP000513.theorem2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000513.theorem2_all_palettes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'JSP000513.finitePaletteEquivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+def JSP000513.Theorem2NatTarget : Prop :=
+∃ n G, JSP000513.ABChoosable G 4 1 ∧ ¬JSP000513.ABChoosable G 8 2
+def JSP000513.Theorem2AllPalettesTarget : Prop :=
+∃ n G, (∀ (Color : Type), JSP000513.ABChoosableOn G Color 4 1) ∧ ¬∀ (Color : Type), JSP000513.ABChoosableOn G Color 8 2
+def JSP000513.FinitePaletteEquivalenceTarget : Prop :=
+∀ (n a b : ℕ) (G : SimpleGraph (Fin n)),
+  JSP000513.ABChoosable G a b ↔ ∀ (Color : Type), JSP000513.ABChoosableOn G Color a b
+def JSP000513.IsListMulticoloring.{u, v} : {V : Type u} →
+  {Color : Type v} → SimpleGraph V → (V → Finset Color) → ℕ → (V → Finset Color) → Prop :=
+fun {V} {Color} G L b φ =>
+  (∀ (x : V), φ x ⊆ L x) ∧ (∀ (x : V), (φ x).card = b) ∧ ∀ (x y : V), G.Adj x y → Disjoint (φ x) (φ y)
+def JSP000513.ABChoosableOn.{u, v} : {V : Type u} → SimpleGraph V → Type v → ℕ → ℕ → Prop :=
+fun {V} G Color a b => ∀ (L : V → Finset Color), (∀ (x : V), (L x).card = a) → JSP000513.ListMulticolorable G L b
+def JSP000513.StrongRelaxed.{u, v, w} : {V : Type u} →
+  {Color : Type v} → {I : Type w} → SimpleGraph V → (V → Finset Color) → V → V → (I → V) → Prop :=
+fun {V} {Color} {I} G L a b s =>
+  (∃ ca ∈ L a,
+      ∃ cb ∈ L b, ∀ (cs : I → Color), (∀ (i : I), cs i ∈ L (s i)) → JSP000513.BoundaryExtension G L a b s ca cb cs) ∨
+    L a = L b ∧
+      ∃ cs, (∀ (i : I), cs i ∈ L (s i)) ∧ ∀ ca ∈ L a, ∀ cb ∈ L b, JSP000513.BoundaryExtension G L a b s ca cb cs
+CLOSURE JSP000513.theorem2: 6182 constants; axioms=[Quot.sound,
+ propext,
+ Classical.choice]; flagged=[]; file=D:/Lean/jsp-000513-cleanroom/evidence/closure-JSP000513.theorem2.txt
+CLOSURE JSP000513.theorem2_all_palettes: 6182 constants; axioms=[Quot.sound,
+ propext,
+ Classical.choice]; flagged=[]; file=D:/Lean/jsp-000513-cleanroom/evidence/closure-JSP000513.theorem2_all_palettes.txt
+CLOSURE JSP000513.finitePaletteEquivalence: 3992 constants; axioms=[propext,
+ Quot.sound,
+ Classical.choice]; flagged=[]; file=D:/Lean/jsp-000513-cleanroom/evidence/closure-JSP000513.finitePaletteEquivalence.txt

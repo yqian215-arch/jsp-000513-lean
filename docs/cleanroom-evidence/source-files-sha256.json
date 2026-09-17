@@ -1,0 +1,102 @@
+[
+  {
+    "file": "JSP000513.lean",
+    "sha256": "0be234c0a61941612a812b13413a718654cab8c81c05203157987e866106b35b"
+  },
+  {
+    "file": "JSP000513/C5General.lean",
+    "sha256": "cf915284064f707d01c5c70d2f555a3bdab4e59645fdf8b1b9d64b7af3fc8e2e"
+  },
+  {
+    "file": "JSP000513/C5Obstruction.lean",
+    "sha256": "f7d51dc9f82bc45fd2543daf67a08be8d041899d4a84a43ec21f9ee250467a78"
+  },
+  {
+    "file": "JSP000513/C5Positive.lean",
+    "sha256": "375e04cd5156dbf2308fec8db31a2b4e7bdbab48f14948150f46e9fac97cccda"
+  },
+  {
+    "file": "JSP000513/ColorForcing.lean",
+    "sha256": "861b18ea162b102ebc2fe334ecec7499b073ea048f5968abe21e8f66cedada0f"
+  },
+  {
+    "file": "JSP000513/Definitions.lean",
+    "sha256": "3122dd331409b87169018cd053bf0959949bfdc569bc4cc1768919ad3104bc6c"
+  },
+  {
+    "file": "JSP000513/FinalConstruction.lean",
+    "sha256": "95b218b890715d9707fde669b3a26bf54b197553c658d47496f7eaa421084f10"
+  },
+  {
+    "file": "JSP000513/FinsetTools.lean",
+    "sha256": "bedaa1eb8e816bedaddade789641909e132e39cabcd56224b936c64aaf6bd50a"
+  },
+  {
+    "file": "JSP000513/G1.lean",
+    "sha256": "129defb1f2ccc5b0bbdb87eb67978c15dc3f85367e4d3479190f2efbd79f2b8a"
+  },
+  {
+    "file": "JSP000513/G2.lean",
+    "sha256": "c35c95909ac372d2918ff20cc518b3427f0046d1e8346e0c5dd7bc1a7bd21834"
+  },
+  {
+    "file": "JSP000513/G3.lean",
+    "sha256": "f36f41f0f45be679d7e314773ed3968df0045c9e5503c7f9551f3c9ccf3237d0"
+  },
+  {
+    "file": "JSP000513/G4.lean",
+    "sha256": "687b79251be5ab39204749d98e896fd6b3a4f9960601c1099af74de539d54b8a"
+  },
+  {
+    "file": "JSP000513/G5.lean",
+    "sha256": "2861fe3c760cd92c749eefe8b8af15ae01cf29b0cdbfeb3633cf80e6553e7069"
+  },
+  {
+    "file": "JSP000513/GraphAssembly.lean",
+    "sha256": "324f13d1d787c2423dc63e03b3e83e454ac43f2975d9bbfa8e138c86cd826b02"
+  },
+  {
+    "file": "JSP000513/ListColoring.lean",
+    "sha256": "a893adce8c11157ea31a7b28dea5027f2d8bfbd65bef6a1e61f9ac41ebcf3d6d"
+  },
+  {
+    "file": "JSP000513/MainTheorem.lean",
+    "sha256": "66ba66b5a86427dc79c318207cb3a121776b05372d1213d52158669f0ca1c2f0"
+  },
+  {
+    "file": "JSP000513/NineAttachment.lean",
+    "sha256": "7f2a08e2fc7de86d338733b3bc76636cc1a474615eb5d3e1dfb3b4349adc3e54"
+  },
+  {
+    "file": "JSP000513/PaletteEquivalence.lean",
+    "sha256": "4352b7cb053d78ecea7851d6a64b7d63cf4cbff88f566e521d4c0313516e8367"
+  },
+  {
+    "file": "JSP000513/Relaxed.lean",
+    "sha256": "470fe5f025015be6386025287c18e9c186e32288cc7db413868dff7fbbfe9d1f"
+  },
+  {
+    "file": "JSP000513/SevenAttachment.lean",
+    "sha256": "88adfc62ed62fae11cd6956fd70bb555e65e92449e18034e0bdf1b2ff78c919c"
+  },
+  {
+    "file": "JSP000513/StatementDrafts.lean",
+    "sha256": "7a85b30947eb64489235cd118d61648f7bd14526870ff62d2da1379981aae91d"
+  },
+  {
+    "file": "JSP000513/TriangleTools.lean",
+    "sha256": "e3d2743278cd048eb98c44bb6b838de33ea301f0092326def8ac0b4af845e11f"
+  },
+  {
+    "file": "lakefile.toml",
+    "sha256": "781efecc4f7047fcabdfc4d46cabd1906cb42c74c700a07a9a718ff8dcd121e3"
+  },
+  {
+    "file": "scripts/Build.ps1",
+    "sha256": "b1bf89f07579af0a24df3ec5ec3111074a03fe08a2896c1b28654c2276dfa884"
+  },
+  {
+    "file": "scripts/Enter-Lean.ps1",
+    "sha256": "e00289e3fbf84ddaf5fe26457b873733ef1b40a1a5f4c8de319d5f56155e0a8d"
+  }
+]
