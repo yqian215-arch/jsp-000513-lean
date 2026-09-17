@@ -1,0 +1,127 @@
+JSP000513\SevenAttachment.lean:12:  symm := ⟨by decide⟩
+JSP000513\SevenAttachment.lean:13:  loopless := ⟨by decide⟩
+JSP000513\SevenAttachment.lean:21:theorem lists_card : ∀ i x, (lists i x).card = 2 * halfSizes x := by decide
+JSP000513\SevenAttachment.lean:84:  obtain ⟨a,ha,har⟩ := Finset.exists_mem_ne (s := L 0) (by rw [hs]; decide) r
+JSP000513\SevenAttachment.lean:85:  obtain ⟨b,hb,hbr⟩ := Finset.exists_mem_ne (s := L 1) (by rw [hs]; decide) r
+JSP000513\SevenAttachment.lean:86:  obtain ⟨c,hc,hca,hcb⟩ := exists_mem_avoiding_pair (L 2) (by rw [hs]; decide) a b
+JSP000513\SevenAttachment.lean:99:  obtain ⟨e,he,hed⟩ := Finset.exists_mem_ne (s := L 4) (by rw [hs]; decide) d
+JSP000513\SevenAttachment.lean:100:  obtain ⟨f,hf,hfe⟩ := Finset.exists_mem_ne (s := L 5) (by rw [hs]; decide) e
+JSP000513\SevenAttachment.lean:101:  obtain ⟨t,ht,hte,htf⟩ := exists_mem_avoiding_pair (L 6) (by rw [hs]; decide) e f
+JSP000513\SevenAttachment.lean:127:    exact (show Disjoint ({1,2,3} : Finset ℕ) {4,5,6} by decide).mono h0sub h1sub
+JSP000513\SevenAttachment.lean:132:      · exact h0sub.trans (by decide)
+JSP000513\SevenAttachment.lean:133:      · exact h1sub.trans (by decide)
+JSP000513\SevenAttachment.lean:136:    Finset.disjoint_union_left.mpr ⟨he 0 2 (by decide),he 1 2 (by decide)⟩
+JSP000513\SevenAttachment.lean:140:    decide
+JSP000513\SevenAttachment.lean:144:    have hn0 := Finset.disjoint_left.mp (he 3 0 (by decide)) hcm
+JSP000513\SevenAttachment.lean:145:    have hn1 := Finset.disjoint_left.mp (he 3 1 (by decide)) hcm
+JSP000513\SevenAttachment.lean:146:    have hn2 := Finset.disjoint_left.mp (he 3 2 (by decide)) hcm
+JSP000513\SevenAttachment.lean:158:    have hn := Finset.disjoint_left.mp (he 4 3 (by decide)) hcm
+JSP000513\SevenAttachment.lean:165:    (he 4 5 (by decide)) (he 6 4 (by decide)) (he 6 5 (by decide))
+JSP000513\NineAttachment.lean:11:  fin_cases v <;> decide
+JSP000513\NineAttachment.lean:42:  obtain ⟨a,ha,har,has⟩ := exists_mem_avoiding_pair (L 0) (by rw [hs]; decide) r s
+JSP000513\NineAttachment.lean:43:  obtain ⟨b,hb,hba⟩ := Finset.exists_mem_ne (s := L 1) (by rw [hs]; decide) a
+JSP000513\NineAttachment.lean:44:  obtain ⟨c,hc,hca,hcb⟩ := exists_mem_avoiding_pair (L 2) (by rw [hs]; decide) a b
+JSP000513\G5.lean:10:  symm := ⟨by decide⟩
+JSP000513\G5.lean:11:  loopless := ⟨by decide⟩
+JSP000513\G5.lean:32:  | inr b => fin_cases b <;> decide
+JSP000513\G5.lean:52:      fin_cases a <;> fin_cases b <;> simp [small] at h <;> decide
+JSP000513\G5.lean:56:      rcases hb with rfl | rfl | rfl <;> exact hg.2 _ _ (by decide)
+JSP000513\G5.lean:58:      rcases hb with rfl | rfl | rfl <;> exact hg.2 _ _ (by decide)
+JSP000513\G5.lean:71:  obtain ⟨c1,hc1,hc1a,hc1b⟩ := exists_mem_avoiding_pair (K 1) (by rw [hs]; decide) a b
+JSP000513\G5.lean:72:  obtain ⟨c4,hc4,hc4a⟩ := Finset.exists_mem_ne (s := K 4) (by rw [hs]; decide) a
+JSP000513\G5.lean:73:  obtain ⟨c3,hc3,hc3b,hc3c4⟩ := exists_mem_avoiding_pair (K 3) (by rw [hs]; decide) b c4
+JSP000513\G5.lean:74:  obtain ⟨cy,hcy,hcyb⟩ := Finset.exists_mem_ne (s := K 6) (by rw [hs]; decide) b
+JSP000513\G5.lean:75:  obtain ⟨cx,hcx,hcxa,hcxcy⟩ := exists_mem_avoiding_pair (K 5) (by rw [hs]; decide) a cy
+JSP000513\G5.lean:99:  have hM0 : M 0 = K 0 := Finset.eq_of_subset_of_card_le (hMT 0) (by rw [hs 0,hMc]; decide)
+JSP000513\G5.lean:100:  have hM2 : M 2 = K 2 := Finset.eq_of_subset_of_card_le (hMT 2) (by rw [hs 2,hMc]; decide)
+JSP000513\G5.lean:121:      (by rw [hs]; decide) (g 1) (g 3)
+JSP000513\G5.lean:123:      (by rw [hs]; decide) (g 5) (g 6)
+JSP000513\G4.lean:83:    · exact hφ.2.2 _ _ (by change (0 : Fin 3) ≠ 1; decide)
+JSP000513\G4.lean:84:    · exact hφ.2.2 _ _ (by change (2 : Fin 3) ≠ 0; decide)
+JSP000513\G4.lean:85:    · exact hφ.2.2 _ _ (by change (2 : Fin 3) ≠ 1; decide)
+JSP000513\G4.lean:93:  · exact hφ.2.2 _ _ ⟨rfl,by change (0 : Fin 3) ≠ 1; decide⟩
+JSP000513\G4.lean:94:  · exact hφ.2.2 _ _ ⟨rfl,by change (2 : Fin 3) ≠ 0; decide⟩
+JSP000513\G4.lean:95:  · exact hφ.2.2 _ _ ⟨rfl,by change (2 : Fin 3) ≠ 1; decide⟩
+JSP000513\G3.lean:51:      (by rw [hK]; decide) (q 0) (q 1)
+JSP000513\G2.lean:12:  symm := ⟨by decide⟩
+JSP000513\G2.lean:13:  loopless := ⟨by decide⟩
+JSP000513\G2.lean:22:def cycleVertex (x : Fin 5) : Fin 9 := x.castLE (by decide)
+JSP000513\G2.lean:25:theorem lists_card : ∀ x, (lists x).card = 2 * halfSizes x := by decide
+JSP000513\G2.lean:26:theorem cycle_adj : ∀ x y, C5.graph.Adj x y → graph.Adj (cycleVertex x) (cycleVertex y) := by decide
+JSP000513\G2.lean:27:theorem cycle_center_adj : ∀ x, graph.Adj (cycleVertex x) 5 := by decide
+JSP000513\G2.lean:35:set_option maxHeartbeats 1200000 in
+JSP000513\G2.lean:48:  have h01 := hf.2 0 1 (by decide)
+JSP000513\G2.lean:49:  have h12 := hf.2 1 2 (by decide)
+JSP000513\G2.lean:50:  have h23 := hf.2 2 3 (by decide)
+JSP000513\G2.lean:51:  have h34 := hf.2 3 4 (by decide)
+JSP000513\G2.lean:52:  have h40 := hf.2 4 0 (by decide)
+JSP000513\G2.lean:65:/-- DHS19 Lemma 5: both relaxed extension alternatives, with the
+JSP000513\G2.lean:82:    obtain ⟨d,hd,hdc⟩ := Finset.exists_mem_ne (s := L 6) (by rw [hsize]; decide) c
+JSP000513\G2.lean:83:    obtain ⟨e,he,hed⟩ := Finset.exists_mem_ne (s := L 7) (by rw [hsize]; decide) d
+JSP000513\G2.lean:85:      (by rw [hsize]; decide) d e
+JSP000513\G2.lean:118:    obtain ⟨e,he,het⟩ := Finset.exists_mem_ne (s := L 7) (by rw [hsize]; decide) t
+JSP000513\G2.lean:120:      (by rw [hsize]; decide) e t
+JSP000513\G2.lean:145:    rw [Finset.card_union_of_disjoint (he 7 8 (by decide)),hc 7,hc 8]
+JSP000513\G2.lean:146:    decide
+JSP000513\G2.lean:150:    have hn7 := Finset.disjoint_left.mp (he 6 7 (by decide)) hcm
+JSP000513\G2.lean:151:    have hn8 := Finset.disjoint_left.mp (he 6 8 (by decide)) hcm
+JSP000513\G2.lean:163:    have hn := Finset.disjoint_left.mp (he 5 6 (by decide)) hcm
+JSP000513\G2.lean:172:    decide
+JSP000513\ColorForcing.lean:17:    decide
+JSP000513\G1.lean:11:  symm := ⟨by decide⟩
+JSP000513\G1.lean:12:  loopless := ⟨by decide⟩
+JSP000513\G1.lean:22:theorem lists_card : ∀ x, (lists x).card = 2 * halfSizes x := by decide
+JSP000513\G1.lean:24:def cycleVertex (x : Fin 5) : Fin 7 := x.castLE (by decide)
+JSP000513\G1.lean:27:  decide
+JSP000513\G1.lean:36:  obtain ⟨cy, hcy⟩ := Finset.card_pos.mp (show 0 < (L 6).card by rw [hsize]; decide)
+JSP000513\G1.lean:38:    (s := L 5) (by rw [hsize]; decide) cy
+JSP000513\G1.lean:54:  have h01 := hedge 0 1 (by decide)
+JSP000513\G1.lean:55:  have h12 := hedge 1 2 (by decide)
+JSP000513\G1.lean:56:  have h23 := hedge 2 3 (by decide)
+JSP000513\G1.lean:57:  have h34 := hedge 3 4 (by decide)
+JSP000513\G1.lean:58:  have h40 := hedge 4 0 (by decide)
+JSP000513\G1.lean:75:    have hn := (Finset.disjoint_left.mp (he 5 6 (by decide))) hcm
+JSP000513\G1.lean:87:    · have hn := (Finset.disjoint_left.mp (he 0 5 (by decide))) hcm
+JSP000513\G1.lean:93:    · have hn := (Finset.disjoint_left.mp (he 2 6 (by decide))) hcm
+JSP000513\C5Positive.lean:43:  decide
+JSP000513\C5Obstruction.lean:22:  symm := ⟨by decide⟩
+JSP000513\C5Obstruction.lean:23:  loopless := ⟨by decide⟩
+JSP000513\C5Obstruction.lean:35:theorem lists_card : ∀ x, (lists x).card = 4 := by decide
+JSP000513\C5Obstruction.lean:46:theorem pairChoices_card : ∀ x, (pairChoices x).card = 6 := by decide
+JSP000513\C5Obstruction.lean:48:set_option maxRecDepth 65536 in
+JSP000513\C5Obstruction.lean:49:set_option maxHeartbeats 8000000 in
+JSP000513\C5Obstruction.lean:60:  decide
+JSP000513\C5Obstruction.lean:71:    ⟨hedge 0 1 (by decide), hedge 1 2 (by decide),
+JSP000513\C5Obstruction.lean:72:      hedge 2 3 (by decide), hedge 3 4 (by decide), hedge 4 0 (by decide)⟩
+JSP000513\FinsetTools.lean:72:      decide
+JSP000513\C5General.lean:6:theorem adj_steps : ∀ x y, graph.Adj x y → y = x + 1 ∨ y = x - 1 := by decide
+JSP000513\C5General.lean:7:theorem adj_add : ∀ k x y, graph.Adj x y → graph.Adj (x+k) (y+k) := by decide
+JSP000513\C5General.lean:8:theorem adj_sub : ∀ k x y, graph.Adj x y → graph.Adj (x-k) (y-k) := by decide
+JSP000513\C5General.lean:9:theorem adj_flip : ∀ k x y, graph.Adj x y → graph.Adj (k-x) (k-y) := by decide
+JSP000513\C5General.lean:10:theorem sub_add_cancel_fin : ∀ k x : Fin 5, (x-k)+k=x := by decide
+JSP000513\C5General.lean:11:theorem sub_sub_cancel_fin : ∀ k x : Fin 5, k-(k-x)=x := by decide
+JSP000513\C5General.lean:13:theorem one_add_fin : ∀ x : Fin 5, 1+x=x+1 := by decide
+JSP000513\C5General.lean:14:theorem sub_zero_fin : ∀ x : Fin 5, x-0=x := by decide
+JSP000513\C5General.lean:51:    have h01 := hedge 0 1 (by decide)
+JSP000513\C5General.lean:52:    have h12 := hedge 1 2 (by decide)
+JSP000513\C5General.lean:53:    have h23 := hedge 2 3 (by decide)
+JSP000513\C5General.lean:54:    have h34 := hedge 3 4 (by decide)
+JSP000513\C5General.lean:140:  have h02 := heq 0 1 2 (by decide) (by decide)
+JSP000513\C5General.lean:141:  have h24 := heq 2 3 4 (by decide) (by decide)
+JSP000513\C5General.lean:142:  have hd := he 4 0 (by decide)
+JSP000513\FinalConstruction.lean:8:  · fin_cases a <;> decide
+JSP000513\FinalConstruction.lean:9:  · fin_cases i <;> fin_cases b <;> decide
+JSP000513\FinalConstruction.lean:10:  · fin_cases c <;> decide
+JSP000513\FinalConstruction.lean:11:  · fin_cases j <;> fin_cases d <;> decide
+JSP000513\FinalConstruction.lean:12:  · fin_cases e <;> decide
+JSP000513\FinalConstruction.lean:16:  · fin_cases a <;> decide
+JSP000513\FinalConstruction.lean:17:  · fin_cases i <;> fin_cases b <;> decide
+JSP000513\FinalConstruction.lean:18:  · fin_cases c <;> decide
+JSP000513\FinalConstruction.lean:19:  · fin_cases j <;> fin_cases d <;> decide
+JSP000513\FinalConstruction.lean:20:  · fin_cases e <;> decide
+JSP000513\FinalConstruction.lean:58:    rw [Finset.card_union_of_disjoint (ψ.property.2 0 1 (by decide)),ψ.property.1,ψ.property.1]
+JSP000513\FinalConstruction.lean:69:  | inl a => change palette.card = 8; decide
+JSP000513\FinalConstruction.lean:73:        (Finset.disjoint_of_subset_right (padding_subset p.1 p.2) (by decide))
+JSP000513\FinalConstruction.lean:100:  obtain ⟨a,ha⟩ := Finset.card_pos.mp (by rw [hs]; decide : 0 < (L 0).card)
+JSP000513\FinalConstruction.lean:101:  obtain ⟨b,hb,hba⟩ := Finset.exists_mem_ne (s := L 1) (by rw [hs]; decide) a
+JSP000513\FinalConstruction.lean:102:  obtain ⟨c,hc,hca,hcb⟩ := exists_mem_avoiding_pair (L 2) (by rw [hs]; decide) a b

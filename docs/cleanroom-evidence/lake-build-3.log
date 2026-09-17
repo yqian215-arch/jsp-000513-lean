@@ -1,0 +1,75 @@
+鈿?[801/827] Replayed JSP000513.FinsetTools
+warning: JSP000513/FinsetTools.lean:19:0: automatically included section variable(s) unused in theorem `JSP000513.exists_mem_of_card_lt`:
+  [DecidableEq 伪]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq 伪] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+鉁?[813/827] Built JSP000513.C5Obstruction (8.1s)
+鉁?[814/827] Built JSP000513.C5Positive (4.5s)
+鉁?[815/827] Built JSP000513.C5General (8.3s)
+鉁?[816/827] Built JSP000513.G1 (8.3s)
+鉁?[817/827] Built JSP000513.G2 (25s)
+鉁?[818/827] Built JSP000513.SevenAttachment (9.4s)
+鉁?[819/827] Built JSP000513.G3 (3.1s)
+鈿?[820/827] Built JSP000513.NineAttachment (2.5s)
+warning: JSP000513/NineAttachment.lean:16:0: automatically included section variable(s) unused in theorem `JSP000513.Triangle.vector_coloring`:
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: JSP000513/NineAttachment.lean:64:0: automatically included section variable(s) unused in theorem `JSP000513.Nine.combine_coloring`:
+  [DecidableEq Color]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Color] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+鉁?[821/827] Built JSP000513.G4 (2.1s)
+鉁?[822/827] Built JSP000513.G5 (8.2s)
+鉁?[823/827] Built JSP000513.FinalConstruction (3.5s)
+鉁?[824/827] Built JSP000513.MainTheorem (2.4s)
+鉁?[825/827] Built JSP000513.PaletteEquivalence (2.0s)
+鈩?[826/827] Built JSP000513 (3.1s)
+info: JSP000513.lean:14:0: 'JSP000513.C5.lists_card' depends on axioms: [propext, Quot.sound]
+info: JSP000513.lean:15:0: 'JSP000513.C5.pairChoices_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:16:0: 'JSP000513.C5.mem_pairChoices_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:17:0: 'JSP000513.C5.no_compatible_choices' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:18:0: 'JSP000513.C5.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:19:0: 'JSP000513.C5.not_ABChoosable_four_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:20:0: 'JSP000513.listColorable_iff_multicolorable_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:21:0: 'JSP000513.C5.half_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:22:0: 'JSP000513.G1.half_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:23:0: 'JSP000513.G1.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:25:0: 'JSP000513.C5.colorable_or_uniform_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:26:0: 'JSP000513.C5.colorable_erase_of_nonuniform_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:27:0: 'JSP000513.C5.extend_uniform_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:28:0: 'JSP000513.C5.not_twofold_palette_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:29:0: 'JSP000513.G2.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:30:0: 'JSP000513.G2.twofold_hits_special' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:33:0: 'JSP000513.Seven.flexible_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:34:0: 'JSP000513.Seven.greedy_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:35:0: 'JSP000513.Seven.twofold_terminal_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:36:0: 'JSP000513.G3.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:37:0: 'JSP000513.G3.twofold_terminal_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:40:0: 'JSP000513.two_roots_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:41:0: 'JSP000513.avoid_two_bad_deletions' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:42:0: 'JSP000513.Nine.flexible_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:43:0: 'JSP000513.Nine.greedy_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:44:0: 'JSP000513.G4.half_list_relaxed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:45:0: 'JSP000513.G4.twofold_terminals_forced' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:48:0: 'JSP000513.G5.half_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:49:0: 'JSP000513.G5.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:52:0: 'JSP000513.Final.four_list_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:53:0: 'JSP000513.Final.not_listMulticolorable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:54:0: 'JSP000513.theorem2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:55:0: 'JSP000513.theorem2_all_palettes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:58:0: 'JSP000513.finitePaletteEquivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: JSP000513.lean:59:0: def JSP000513.Theorem2NatTarget : Prop :=
+鈭?n G, JSP000513.ABChoosable G 4 1 鈭?卢JSP000513.ABChoosable G 8 2
+info: JSP000513.lean:60:0: def JSP000513.Theorem2AllPalettesTarget : Prop :=
+鈭?n G, (鈭€ (Color : Type), JSP000513.ABChoosableOn G Color 4 1) 鈭?卢鈭€ (Color : Type), JSP000513.ABChoosableOn G Color 8 2
+info: JSP000513.lean:61:0: def JSP000513.FinitePaletteEquivalenceTarget : Prop :=
+鈭€ (n a b : 鈩? (G : SimpleGraph (Fin n)),
+  JSP000513.ABChoosable G a b 鈫?鈭€ (Color : Type), JSP000513.ABChoosableOn G Color a b
+Build completed successfully (827 jobs).

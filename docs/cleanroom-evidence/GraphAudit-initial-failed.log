@@ -1,0 +1,121 @@
+"PASS expected C5: 5 vertices, 5 undirected edges, all lists, bijection"
+"PASS expected G1: 7 vertices, 8 undirected edges, all lists, bijection"
+"PASS expected G2: 9 vertices, 14 undirected edges, all lists, bijection"
+docs/cleanroom-evidence/GraphAudit.lean:64:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable
+    (match x鉁澛? x鉁?with
+    | Sum.inl a, Sum.inl b => G2.graph.Adj a b
+    | Sum.inr a, Sum.inr b => a.1 = b.1 鈭?Seven.graph.Adj a.2 b.2
+    | Sum.inl a, Sum.inr b => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1)
+    | Sum.inr b, Sum.inl a => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/cleanroom-evidence/GraphAudit.lean:70:94: error: Tactic `decide` failed for proposition
+  鈭€ (a b : Fin 23), G3.graph.Adj (mapG3 a) (mapG3 b) 鈫?(a, b) 鈭?edgesG3 鈭?(b, a) 鈭?edgesG3
+because its `Decidable` instance
+  Nat.decidableForallFin fun a => 鈭€ (b : Fin 23), G3.graph.Adj (mapG3 a) (mapG3 b) 鈫?(a, b) 鈭?edgesG3 鈭?(b, a) 鈭?edgesG3
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableIff`, `instDecidableRelVertexAdjGraph_docs`, `Nat.decidableBallLT`, and `Nat.decidableForallFin`, reduction got stuck at the `Decidable` instance
+  sorry
+"PASS expected G3: 23 vertices, 36 undirected edges, all lists, bijection"
+docs/cleanroom-evidence/GraphAudit.lean:78:113: error: Tactic `decide` failed for proposition
+  {p | G3.graph.Adj (mapG3 p.1) (mapG3 p.2)}.card = 72
+because its `Decidable` instance
+  instDecidableEqNat {p | G3.graph.Adj (mapG3 p.1) (mapG3 p.2)}.card 72
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqNat`, `instDecidableRelVertexAdjGraph_docs`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance
+  match h : {p | G3.graph.Adj (mapG3 p.1) (mapG3 p.2)}.card.beq 72 with
+  | true => isTrue 鈰?  | false => isFalse 鈰?docs/cleanroom-evidence/GraphAudit.lean:85:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable
+    (match x鉁澛? x鉁?with
+    | Sum.inl a, Sum.inl b =>
+      match a, b with
+      | Sum.inl a, Sum.inl b => G2.graph.Adj a b
+      | Sum.inr a, Sum.inr b => a.1 = b.1 鈭?Seven.graph.Adj a.2 b.2
+      | Sum.inl a, Sum.inr b => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1)
+      | Sum.inr b, Sum.inl a => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1)
+    | Sum.inr a, Sum.inr b =>
+      match a, b with
+      | Sum.inl a, Sum.inl b => 鈯?Adj a b
+      | Sum.inr a, Sum.inr b => a.1 = b.1 鈭?鈯?Adj a.2 b.2
+      | Sum.inl a, Sum.inr b => a = 2 鈭?b.2 = 0
+      | Sum.inr b, Sum.inl a => a = 2 鈭?b.2 = 0
+    | Sum.inl a, Sum.inr b => (鈭?i, a = G3.boundary i) 鈭?b = Sum.inl 0
+    | Sum.inr b, Sum.inl a => (鈭?i, a = G3.boundary i) 鈭?b = Sum.inl 0)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/cleanroom-evidence/GraphAudit.lean:91:94: error: Tactic `decide` failed for proposition
+  鈭€ (a b : Fin 32), G4.graph.Adj (mapG4 a) (mapG4 b) 鈫?(a, b) 鈭?edgesG4 鈭?(b, a) 鈭?edgesG4
+because its `Decidable` instance
+  Nat.decidableForallFin fun a => 鈭€ (b : Fin 32), G4.graph.Adj (mapG4 a) (mapG4 b) 鈫?(a, b) 鈭?edgesG4 鈭?(b, a) 鈭?edgesG4
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableIff`, `instDecidableRelVertexAdjGraph_docs_1`, `Nat.decidableBallLT`, and `Nat.decidableForallFin`, reduction got stuck at the `Decidable` instance
+  sorry
+"PASS expected G4: 32 vertices, 49 undirected edges, all lists, bijection"
+docs/cleanroom-evidence/GraphAudit.lean:99:113: error: Tactic `decide` failed for proposition
+  {p | G4.graph.Adj (mapG4 p.1) (mapG4 p.2)}.card = 98
+because its `Decidable` instance
+  instDecidableEqNat {p | G4.graph.Adj (mapG4 p.1) (mapG4 p.2)}.card 98
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqNat`, `instDecidableRelVertexAdjGraph_docs_1`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance
+  match h : {p | G4.graph.Adj (mapG4 p.1) (mapG4 p.2)}.card.beq 98 with
+  | true => isTrue 鈰?  | false => isFalse 鈰?docs/cleanroom-evidence/GraphAudit.lean:106:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable
+    (match x鉁澛? x鉁?with
+    | Sum.inl a, Sum.inl b =>
+      match a, b with
+      | Sum.inl a, Sum.inl b =>
+        match a, b with
+        | Sum.inl a, Sum.inl b => G2.graph.Adj a b
+        | Sum.inr a, Sum.inr b => a.1 = b.1 鈭?Seven.graph.Adj a.2 b.2
+        | Sum.inl a, Sum.inr b => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1)
+        | Sum.inr b, Sum.inl a => a = 8 鈭?(b.2 = 0 鈭?b.2 = 1)
+      | Sum.inr a, Sum.inr b =>
+        match a, b with
+        | Sum.inl a, Sum.inl b => 鈯?Adj a b
+        | Sum.inr a, Sum.inr b => a.1 = b.1 鈭?鈯?Adj a.2 b.2
+        | Sum.inl a, Sum.inr b => a = 2 鈭?b.2 = 0
+        | Sum.inr b, Sum.inl a => a = 2 鈭?b.2 = 0
+      | Sum.inl a, Sum.inr b => (鈭?i, a = G3.boundary i) 鈭?b = Sum.inl 0
+      | Sum.inr b, Sum.inl a => (鈭?i, a = G3.boundary i) 鈭?b = Sum.inl 0
+    | Sum.inr a, Sum.inr b => a = 1 鈭?b = 2 鈭?a = 2 鈭?b = 1 鈭?a = 3 鈭?b = 4 鈭?a = 4 鈭?b = 3
+    | Sum.inl a, Sum.inr b =>
+      a = G4.first 鈭?(b = 0 鈭?b = 2 鈭?b = 3) 鈭?        a = G4.third 鈭?(b = 0 鈭?b = 1 鈭?b = 4) 鈭?          a = G4.boundary 0 鈭?(b = 0 鈭?b = 1) 鈭?a = G4.boundary 1 鈭?(b = 3 鈭?b = 4)
+    | Sum.inr b, Sum.inl a =>
+      a = G4.first 鈭?(b = 0 鈭?b = 2 鈭?b = 3) 鈭?        a = G4.third 鈭?(b = 0 鈭?b = 1 鈭?b = 4) 鈭?          a = G4.boundary 0 鈭?(b = 0 鈭?b = 1) 鈭?a = G4.boundary 1 鈭?(b = 3 鈭?b = 4))
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+docs/cleanroom-evidence/GraphAudit.lean:112:94: error: Tactic `decide` failed for proposition
+  鈭€ (a b : Fin 37), G5.graph.Adj (mapG5 a) (mapG5 b) 鈫?(a, b) 鈭?edgesG5 鈭?(b, a) 鈭?edgesG5
+because its `Decidable` instance
+  Nat.decidableForallFin fun a => 鈭€ (b : Fin 37), G5.graph.Adj (mapG5 a) (mapG5 b) 鈫?(a, b) 鈭?edgesG5 鈭?(b, a) 鈭?edgesG5
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableIff`, `instDecidableRelVertexAdjGraph_docs_2`, `Nat.decidableBallLT`, and `Nat.decidableForallFin`, reduction got stuck at the `Decidable` instance
+  sorry
+"PASS expected G5: 37 vertices, 61 undirected edges, all lists, bijection"
+docs/cleanroom-evidence/GraphAudit.lean:120:114: error: Tactic `decide` failed for proposition
+  {p | G5.graph.Adj (mapG5 p.1) (mapG5 p.2)}.card = 122
+because its `Decidable` instance
+  instDecidableEqNat {p | G5.graph.Adj (mapG5 p.1) (mapG5 p.2)}.card 122
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqNat`, `instDecidableRelVertexAdjGraph_docs_2`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance
+  match h : {p | G5.graph.Adj (mapG5 p.1) (mapG5 p.2)}.card.beq 122 with
+  | true => isTrue 鈰?  | false => isFalse 鈰?docs/cleanroom-evidence/GraphAudit.lean:124:81: error: Tactic `decide` failed for proposition
+  鈭€ (i j : Fin 7), G5.graph.Adj (G5.embed i) (G5.embed j) 鈫?G1.graph.Adj i j
+because its `Decidable` instance
+  Nat.decidableForallFin fun i => 鈭€ (j : Fin 7), G5.graph.Adj (G5.embed i) (G5.embed j) 鈫?G1.graph.Adj i j
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableIff`, `instDecidableRelVertexAdjGraph_docs_2`, `Nat.decidableBallLT`, and `Nat.decidableForallFin`, reduction got stuck at the `Decidable` instance
+  sorry
+docs/cleanroom-evidence/GraphAudit.lean:128:120: error: failed to synthesize
+  Decidable (Final.Valid ![鉄▄9, 10}, 鈰煩, 鉄▄11, 12}, 鈰煩, 鉄▄13, 14}, 鈰煩, 鉄▄15, 16}, 鈰煩])
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+Cleanroom.indexWitness : Final.Index

@@ -1,0 +1,8 @@
+LEAN_PATH=<unset>
+LEAN_SRC_PATH=<unset>
+LEAN_SYSROOT=<unset>
+ELAN_TOOLCHAIN=<unset>
+LAKE_HOME=<unset>
+LAKE_NO_CACHE=<unset>
+LAKE_ARTIFACT_CACHE=<unset>
+LAKE_CACHE_DIR=<unset>

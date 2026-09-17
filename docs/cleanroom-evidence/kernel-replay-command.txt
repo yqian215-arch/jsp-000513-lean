@@ -1,0 +1,1 @@
+COMMAND: lake --no-cache env leanchecker --fresh --verbose JSP000513; cwd=D:\Lean\jsp-000513-cleanroom\repo; start=2026-09-18T07:23:35.3601866+08:00

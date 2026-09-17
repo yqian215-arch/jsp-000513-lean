@@ -1,0 +1,94 @@
+**********************
+PowerShell transcript start
+Start time: 20260918004808
+Username: WIN-CLOTC4QKIR2\Administrator
+RunAs User: WIN-CLOTC4QKIR2\Administrator
+Configuration Name: 
+Machine: WIN-CLOTC4QKIR2 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoProfile -File D:\Lean\jsp-000513-cleanroom\repo\work\cleanroom-build-2.ps1
+Process ID: 12884
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is D:\Lean\jsp-000513-cleanroom\evidence\build-transcript-2.log
+2026-09-18T00:48:08.6836638+08:00
+
+Path
+----
+D:\Lean\jsp-000513-cleanroom\repo
+Microsoft Windows NT 10.0.22631.0
+
+Key   : PSVersion
+Value : 7.6.5
+Name  : PSVersion
+
+
+Key   : PSEdition
+Value : Core
+Name  : PSEdition
+
+
+Key   : GitCommitId
+Value : 7.6.5
+Name  : GitCommitId
+
+
+Key   : OS
+Value : Microsoft Windows 10.0.22631
+Name  : OS
+
+
+Key   : Platform
+Value : Win32NT
+Name  : Platform
+
+
+Key   : PSCompatibleVersions
+Value : {1.0, 2.0, 3.0, 4.0…}
+Name  : PSCompatibleVersions
+
+
+Key   : PSRemotingProtocolVersion
+Value : 2.4
+Name  : PSRemotingProtocolVersion
+
+
+Key   : SerializationVersion
+Value : 1.1.0.1
+Name  : SerializationVersion
+
+
+Key   : WSManStackVersion
+Value : 3.0
+Name  : WSManStackVersion
+
+
+Name   : lean.exe
+Source : D:\Lean\tools\elan\bin\lean.exe
+
+
+Name   : lake.exe
+Source : D:\Lean\tools\elan\bin\lake.exe
+
+
+Name   : elan.exe
+Source : D:\Lean\tools\elan\bin\elan.exe
+
+
+Name   : git.exe
+Source : C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd\git.exe
+
+leanprover/lean4:v4.34.0 (overridden by '\\?\D:\Lean\jsp-000513-cleanroom\repo\lean-toolchain')
+Lean (version 4.34.0, x86_64-w64-windows-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+Lean (version 4.34.0, x86_64-w64-windows-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)
+Lake version 5.0.0-src+293d5d0 (Lean version 4.34.0)
+git version 2.53.0.windows.3
+ELAN_HOME=D:\Lean\tools\elan MATHLIB_CACHE_DIR=D:\Lean\jsp-000513-cleanroom\dependency-download-cache MATHLIB_NO_CACHE_ON_UPDATE=1
+COMMAND: lake --no-cache build; LAKE_NO_CACHE=true LAKE_ARTIFACT_CACHE=false LAKE_CACHE_DIR=D:\Lean\jsp-000513-cleanroom\lake-cache
