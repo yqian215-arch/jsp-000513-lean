@@ -112,3 +112,11 @@ MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP0005
 ## 最终远程确认 — 已完成
 
 2026-09-18：GitHub API 再次确认 yqian215-arch/jsp-000513-lean 为 private=true、visibility=private。完整证明及最终审计提交 79076f593efaba56923ffaeef2de935757090e3b 的本地 HEAD 与远端 refs/heads/phase0-local 完全一致，工作区干净。主定理363d59f也已包含在远端历史中；此前连接重置已恢复。此后的记录提交仅保存本段备份确认。完整形式化、构建、公理审计、本地提交及私有备份要求均已完成。无待证明的主命题依赖，未公开或提交官方奖项。
+
+## 用户要求的全量检查与再次备份 — 2026-09-18
+
+检查起点 e105ad1：51个已跟踪文件，初始 Git status 干净，无未跟踪待纳入文件。Lean 源码、README、theorem_mapping、proof_dependency、构建与公理日志、PROGRESS 以及工具链和依赖锁定文件已全部跟踪。.lake/ 与 work/ 被忽略，跟踪文件中没有编译产物、私钥文件或凭据目录。对全部跟踪文本扫描常见 GitHub/API token、私钥头、URL内凭据及密码/密钥赋值模式，没有发现匹配；这是内容模式检查，不作超出检查范围的保证。
+
+再次 lake build 退出0（827 jobs），日志 docs/validation/recheck-build.log。三个最终定理 theorem2、theorem2_all_palettes、finitePaletteEquivalence 公理仍仅标准三项。当前源文件、构建配置、锁定依赖及脚本的 SHA256 清单为 docs/validation/current-source-sha256.txt；原 source-sha256.txt 保留为早期检查历史。
+
+GitHub API 在本次提交前再次确认 private=true、visibility=private，备份目标仍为 origin/phase0-local。新增检查日志、校验清单和本段记录一并提交推送。当前完整主定理已经证明，无缺失的主形式化步骤；后续不把已完成结果重新描述为只有 Phase 0 或 PoC。
