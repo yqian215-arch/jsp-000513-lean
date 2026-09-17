@@ -8,6 +8,7 @@ import JSP000513.G3
 import JSP000513.G4
 import JSP000513.G5
 import JSP000513.MainTheorem
+import JSP000513.PaletteEquivalence
 
 -- Kernel dependency audit, including the complete main theorem.
 #print axioms JSP000513.C5.lists_card
@@ -53,3 +54,8 @@ import JSP000513.MainTheorem
 #print axioms JSP000513.theorem2
 #print axioms JSP000513.theorem2_all_palettes
 
+
+#print axioms JSP000513.finitePaletteEquivalence
+#print JSP000513.Theorem2NatTarget
+#print JSP000513.Theorem2AllPalettesTarget
+#print JSP000513.FinitePaletteEquivalenceTarget

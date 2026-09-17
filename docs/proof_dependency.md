@@ -1,41 +1,29 @@
-# 证明依赖与 Phase 0 范围
+# 已完成证明依赖树
 
-原文依据：[DHS19 v2](https://arxiv.org/pdf/1806.03880v2)。下面是项目的模块规划，不是已有 Lean 证明清单。
+所有节点已有 Lean 证明；对应 [DHS19 v2](https://arxiv.org/pdf/1806.03880v2)。
 
 ```text
-Theorem 2: exists 4-choosable, not (8:2)-choosable finite graph
-└─ uniform-list construction (K4 and copies of G5)
-   └─ Lemma 8 (G5)
-      ├─ Corollary 4 (G1)
-      │  └─ Lemma 3 (C5)  ← negative half: Phase 0 PoC
-      └─ Lemma 7 (G4)
-         └─ Lemma 6 (G3)
-            └─ Lemma 5 (G2)
+theorem2 / theorem2_all_palettes (MainTheorem)
+├─ 顶点等价重编号：choosable_comap_equiv
+└─ K4 与有限索引副本 (FinalConstruction)
+   └─ G5 / Lemma 8
+      ├─ G1 / Corollary 4
+      │  └─ C5 / Lemma 3 正负性质
+      └─ G4 / Lemma 7
+         ├─ NineAttachment / TriangleTools
+         └─ G3 / Lemma 6
+            ├─ SevenAttachment / ColorForcing
+            └─ G2 / Lemma 5
+               └─ C5General
+
+finitePaletteEquivalence (PaletteEquivalence)
+├─ 有限列表并集、子类型、自然数编码
+├─ ABChoosableOn.of_embedding
+└─ IsListMulticoloring.map_colors
 ```
 
-Lemma 5–7 的关键接口为 relaxed gadget：在指定边界颜色固定后保证扩展，并控制二重染色中的指定颜色。该接口必须保留原文两个备选分支及其量词顺序。
+共用接口：Definitions、ListColoring、Relaxed、GraphAssembly、FinsetTools。任意列表正面证明使用一般有限集选色；有限枚举限于具体小图边关系和 C5 固定列表负面实例。
 
-## 自拟 Lean 分解
+图的编码规模为 G2=9、G3=23、G4=32、G5=37 点。最终类型 `Fin 4 ⊕ (Index × G5.Vertex)` 有限，再重编号为 `Fin (Fintype.card Final.Vertex)`。按组合计算 Index 有2520个元素、最终图有93244点；该具体数字没有作为 Lean 定理证明，也不参与主定理，主定理的有限性由 Fintype 实例给出。
 
-1. 以 `SimpleGraph` 表示有限简单图；以 `Finset` 表示列表和选色。分开定义给定列表可染、任意列表可染、部分染色、限制及扩展。
-2. 建立颜色重命名、列表缩减、诱导子图限制、相容边界粘合等接口。固定自然数调色板可简化主定义；若如此，后续必须证明有限顶点下与任意颜色类型的表述等价。
-3. 用明确顶点类型和边关系编码各 gadget；在每一步核对图、列表、共享顶点、附加边，避免从图片凭印象建图。
-4. 分别证明各 gadget 的正面任意列表扩展性质和负面固定列表约束。正面性质不能用一个固定小调色板的枚举结果代替。
-5. 最后建立统一列表长度的构造、有限性和主命题连接，复核最终定义量词及全部依赖的公理。
-
-## PoC 设计与风险
-
-选择 source_verification.md 中的精确 C5 列表障碍。每个四元列表有六种二元子集，故独立选色只有 `6^5 = 7776` 种候选。这是对该具体实例的自行计算，可用于决定采用可约简的有限证明还是组合计数证明。
-
-概念证明需双计数：五个顶点各用两色，总使用次数为 10；各色独立集容量总和至多 9。若采用有限枚举，应另外证明候选编码涵盖任意合法列表子集，并检查证明依赖；外部脚本搜不到解不能直接算 Lean 证明。
-
-主要风险是任意列表的扩展和粘合，而非这个有限否定实例。最小 PoC 通过只说明图/列表语义及局部障碍可在所选环境中表达并验证，不能据此声称完整形式化已可行或可获得奖项。
-
-另一个实现风险是直接展开最终大图。根据论文各阶段顶点增量自行计数，`G2/G3/G4/G5` 分别有 `9/23/32/37` 个顶点；K4 的四个有标号顶点将八色划分为四个二元组的方式数为 `28*15*6*1 = 2520`。依原构造逐份复制会得到 `4 + 2520*37 = 93244` 个顶点。这一规模计算尚未在 Lean 中验证，但提示最终证明宜使用带索引的副本与抽象粘合，而非枚举整张最终图的全部染色。
-
-## 后续优先级
-
-1. 核验 PoC 语义映射、构建与公理输出。
-2. 证明 Lemma 3 正面半句，再实现 Corollary 4；这两项直接测试任意调色板上的构造性选色。
-3. 给 relaxed gadget 写出类型接口和一份量词顺序审查，再估算 Lemma 5–8 的实现工作量。
-4. 只有这些接口稳定后，才进入最终统一列表构造；当前阶段不扩展为全项目证明。
+无尚缺的主证明依赖。构建与公理结果见 [最终验证](FINAL_VERIFICATION.md)，阶段历程见 [PROGRESS](PROGRESS.md)。

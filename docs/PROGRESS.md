@@ -99,3 +99,11 @@ lake build 退出0（817 jobs），两项主定理审计只有标准三公理，
 MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP000513.theorem2 : Theorem2NatTarget 以及 theorem2_all_palettes : Theorem2AllPalettesTarget。不存在主命题弱化；正面直接对任意 universe 的颜色类型成立。lake build 退出0（826 jobs），两个完整主定理均仅依赖 propext、Classical.choice、Quot.sound，日志 docs/validation/stage7-build.log。
 
 接下来完成单独的 FinitePaletteEquivalenceTarget 桥梁、更新已过时的 Phase 0 文档提示、最终逐项语义检查及全仓库审计，再保存推送最终验证状态。此阶段的完整主定理成果先提交并私有备份。
+
+## 阶段 8 — 完整形式化与最终语义审计完成
+
+完成时间 2026-09-18（北京时间）。新增 PaletteEquivalence.lean，证明单射颜色重命名、可选性沿调色板嵌入传回，以及有限图上自然数颜色与任意颜色类型的等价。FinitePaletteEquivalenceTarget 已由 finitePaletteEquivalence 完整证明；Theorem2NatTarget / Theorem2AllPalettesTarget 沿用原定义并已分别由 theorem2 / theorem2_all_palettes 证明。
+
+最终 lake build 退出0（827 jobs）；三个最终定理公理依赖均只有 propext、Classical.choice、Quot.sound。原始输出 docs/validation/final-build.log。项目 Lean 源码无 sorry、admit、sorryAx、axiom、unsafe、native_decide 匹配；三个多余 DecidableEq 参数警告无碍证明。README、theorem_mapping、proof_dependency 已更新为完整结果；最终复现与语义检查见 docs/FINAL_VERIFICATION.md。
+
+远程情况：G4 f15efde、G5 7e9ec59 已推送；主定理363d59f第一次push遭遇网络连接重置，源码和提交未丢失。最终保存后重试推送全部提交并核对远端。当前数学与Lean证明目标已达到，完成状态只待最终提交和私有远程备份确认；不执行公开或奖项提交。
