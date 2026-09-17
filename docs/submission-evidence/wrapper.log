@@ -1,0 +1,6 @@
+theorem JSP000513.list_choosability_doubling_is_false : ¬∀ (n : ℕ) (G : SimpleGraph (Fin n)),
+    JSP000513.ABChoosable G 4 1 → JSP000513.ABChoosable G 8 2 :=
+fun h =>
+  Exists.casesOn JSP000513.theorem2 fun n h_1 =>
+    Exists.casesOn h_1 fun G h_2 => And.casesOn h_2 fun h4 h82 => h82 (h n G h4)
+'JSP000513.list_choosability_doubling_is_false' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -13,6 +13,7 @@ theorem lists_card (v : Fin 3) : (lists v).card = 2 * halfSizes v := by
 universe u
 variable {Color : Type u} [DecidableEq Color]
 
+omit [DecidableEq Color] in
 theorem vector_coloring (L : Fin 3 → Finset Color) (a b c : Color)
     (ha : a ∈ L 0) (hb : b ∈ L 1) (hc : c ∈ L 2)
     (hab : a ≠ b) (hac : a ≠ c) (hbc : b ≠ c) :
@@ -61,6 +62,7 @@ theorem lists_card (v : Vertex) : (lists v).card = 2 * halfSizes v := by
 universe u
 variable {Color : Type u} [DecidableEq Color]
 
+omit [DecidableEq Color] in
 theorem combine_coloring (L : Vertex → Finset Color)
     (f : Fin 3 → Color) (g : Fin 2 → Fin 3 → Color)
     (hf : IsListColoring Triangle.graph (L ∘ Sum.inl) f)

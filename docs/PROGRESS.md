@@ -120,3 +120,6 @@ MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP0005
 再次 lake build 退出0（827 jobs），日志 docs/validation/recheck-build.log。三个最终定理 theorem2、theorem2_all_palettes、finitePaletteEquivalence 公理仍仅标准三项。当前源文件、构建配置、锁定依赖及脚本的 SHA256 清单为 docs/validation/current-source-sha256.txt；原 source-sha256.txt 保留为早期检查历史。
 
 GitHub API 在本次提交前再次确认 private=true、visibility=private，备份目标仍为 origin/phase0-local。新增检查日志、校验清单和本段记录一并提交推送。当前完整主定理已经证明，无缺失的主形式化步骤；后续不把已完成结果重新描述为只有 Phase 0 或 PoC。
+
+## Submission-hardening code stage (2026-09-18)
+Independent branch submission-hardening from proof 8496ddb257bbdd9948417d3a98a563f2696cd47b. Wrapper and three unused-instance warnings addressed; lake build 828 jobs exit 0, wrapper-only check exit 0, standard axioms only. See SUBMISSION_HARDENING_REPORT.md and submission-evidence for ongoing stage status.

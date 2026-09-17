@@ -16,6 +16,7 @@ theorem exists_mem_avoiding_pair (S : Finset α) (hS : 3 ≤ S.card) (a b : α) 
   obtain ⟨c,hc,hn⟩ := Finset.not_subset.mp hnot
   exact ⟨c,hc,fun h => hn (by simp [h]),fun h => hn (by simp [h])⟩
 
+omit [DecidableEq α] in
 theorem exists_mem_of_card_lt (S T : Finset α) (h : T.card < S.card) :
     ∃ c ∈ S, c ∉ T := by
   apply Finset.not_subset.mp

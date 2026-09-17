@@ -9,7 +9,8 @@ import Mathlib.Data.Fintype.Fin
 Source: Dvořák–Hu–Sereni, arXiv:1806.03880v2, p. 3, Figure 1 (left).
 Index `i : Fin 5` represents the paper's vertex `v_(i+1)`.
 All finite decisions below are reduced and checked by the Lean kernel.
-The positive half of Lemma 3 and Theorem 2 are outside this PoC.
+The positive half is proved in C5Positive.lean; the full finite-graph
+counterexample is assembled in MainTheorem.lean.
 -/
 
 namespace JSP000513.C5

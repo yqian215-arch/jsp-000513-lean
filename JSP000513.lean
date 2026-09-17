@@ -9,6 +9,7 @@ import JSP000513.G4
 import JSP000513.G5
 import JSP000513.MainTheorem
 import JSP000513.PaletteEquivalence
+import JSP000513.Problem
 
 -- Kernel dependency audit, including the complete main theorem.
 #print axioms JSP000513.C5.lists_card
@@ -59,3 +60,5 @@ import JSP000513.PaletteEquivalence
 #print JSP000513.Theorem2NatTarget
 #print JSP000513.Theorem2AllPalettesTarget
 #print JSP000513.FinitePaletteEquivalenceTarget
+
+#print axioms JSP000513.list_choosability_doubling_is_false
