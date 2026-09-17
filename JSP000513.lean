@@ -4,6 +4,7 @@ import JSP000513.C5Positive
 import JSP000513.G1
 import JSP000513.C5General
 import JSP000513.G2
+import JSP000513.G3
 
 -- Phase 0 audit: the full target propositions above have no proof.
 #print axioms JSP000513.C5.lists_card
@@ -23,4 +24,11 @@ import JSP000513.G2
 #print axioms JSP000513.C5.not_twofold_palette_four
 #print axioms JSP000513.G2.half_list_relaxed
 #print axioms JSP000513.G2.twofold_hits_special
+
+
+#print axioms JSP000513.Seven.flexible_extension
+#print axioms JSP000513.Seven.greedy_extension
+#print axioms JSP000513.Seven.twofold_terminal_forced
+#print axioms JSP000513.G3.half_list_relaxed
+#print axioms JSP000513.G3.twofold_terminal_forced
 
