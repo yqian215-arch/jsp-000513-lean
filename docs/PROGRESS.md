@@ -91,3 +91,11 @@ G5 以 G4.Vertex ⊕ Fin 5 编码37顶点，G1 的 v1,v3 分别共享 G4 的 fir
 已证明任意半列表可染：G4 第一分支配合 G1 增大半列表上的预着色扩展；第二分支先删除两个末端的固定色，再选精确大小子列表应用 G1 正面定理。负面用 G4 两末端强制{7,8}，删去增添色并限制到 G1，得到矛盾。
 
 lake build 退出0（817 jobs），两项主定理审计只有标准三公理，日志 docs/validation/stage6-build.log。继续最终 Theorem 2：K4 的所有合法二重着色索引 G5 副本，按 halfSizes 补邻居及补颜色；需证明半列表大小在2至4之间、固定颜色均在1至8、统一后的八元列表不可二重染色及任意四元列表可染。完整主定理尚在实现中。
+
+## 阶段 7 — 完整主定理已通过 Lean（后续语义审计继续）
+
+新增 FinalConstruction.lean：以{9,…,16}上的 K4 合法二重列表着色为有限索引，每个索引连接一个 G5 副本。halfSizes=2,3,4 时分别连接 K4 前2、1、0点，补入对应选色，证明全部固定列表恰八色。任意四元列表先贪心染 K4，删除邻居颜色后每副本仍可选出完整半列表，由 G5 染色；负面取由 K4 实际着色索引的副本，排除补入色后与 G5 矛盾。
+
+MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP000513.theorem2 : Theorem2NatTarget 以及 theorem2_all_palettes : Theorem2AllPalettesTarget。不存在主命题弱化；正面直接对任意 universe 的颜色类型成立。lake build 退出0（826 jobs），两个完整主定理均仅依赖 propext、Classical.choice、Quot.sound，日志 docs/validation/stage7-build.log。
+
+接下来完成单独的 FinitePaletteEquivalenceTarget 桥梁、更新已过时的 Phase 0 文档提示、最终逐项语义检查及全仓库审计，再保存推送最终验证状态。此阶段的完整主定理成果先提交并私有备份。

@@ -7,8 +7,9 @@ import JSP000513.G2
 import JSP000513.G3
 import JSP000513.G4
 import JSP000513.G5
+import JSP000513.MainTheorem
 
--- Phase 0 audit: the full target propositions above have no proof.
+-- Kernel dependency audit, including the complete main theorem.
 #print axioms JSP000513.C5.lists_card
 #print axioms JSP000513.C5.pairChoices_card
 #print axioms JSP000513.C5.mem_pairChoices_iff
@@ -45,4 +46,10 @@ import JSP000513.G5
 
 #print axioms JSP000513.G5.half_list_colorable
 #print axioms JSP000513.G5.not_listMulticolorable
+
+
+#print axioms JSP000513.Final.four_list_colorable
+#print axioms JSP000513.Final.not_listMulticolorable
+#print axioms JSP000513.theorem2
+#print axioms JSP000513.theorem2_all_palettes
 
