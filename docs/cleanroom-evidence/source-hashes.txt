@@ -1,0 +1,9 @@
+
+Algorithm : SHA256
+Hash      : 3119F19D70D0CDA397AA7BD9CEEDE8673C5BF6B1B740A6B4F3A0BE47091A7FFD
+Path      : D:\Lean\jsp-000513-cleanroom\evidence\DHS19v2.pdf
+
+Algorithm : SHA256
+Hash      : 8E760E26B5CCD9E3F568D756BD30DC5B49F0AAD63CE679FEFEDFB428FF04E240
+Path      : D:\Lean\jsp-000513-cleanroom\evidence\official-catalog.md
+

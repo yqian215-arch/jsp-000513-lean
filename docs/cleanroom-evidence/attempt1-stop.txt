@@ -1,0 +1,1 @@
+Attempt 1 interrupted deliberately: default lake build attempted Reservoir batteries build.barrel download. No success claimed. Restart with LAKE_NO_CACHE=true and LAKE_ARTIFACT_CACHE=false.

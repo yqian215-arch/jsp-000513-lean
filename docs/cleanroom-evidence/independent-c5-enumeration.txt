@@ -1,0 +1,1 @@
+Paper lists, 5 cycle edges, 2-subsets: candidates=7776, solutions=0

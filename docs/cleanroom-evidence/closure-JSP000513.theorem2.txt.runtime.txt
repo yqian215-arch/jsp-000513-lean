@@ -1,0 +1,58 @@
+extern Nat.beq
+extern Nat.add
+extern Nat.decEq
+extern Array.size
+extern Array.mk
+extern Array.toList
+implemented_by Array.foldlM => Array.foldlMUnsafe
+extern Nat.decLe
+extern Nat.ble
+extern Nat.sub
+extern Nat.pred
+extern Nat.decLt
+extern Array.getInternal
+extern String.ofByteArray
+extern ByteArray.mk
+extern UInt8.ofBitVec
+extern Nat.pow
+extern Nat.mul
+extern UInt32.ofBitVec
+extern UInt32.toNat
+extern UInt32.toBitVec
+extern UInt8.ofNat
+extern Nat.modCore
+extern Nat.mod
+extern Nat.div
+extern ByteArray.emptyWithCapacity
+extern Array.emptyWithCapacity
+extern ByteArray.push
+extern Array.push
+implemented_by Lean.Name.anonymous => Lean.Name.anonymous._override
+implemented_by Lean.Name.str => Lean.Name.str._override
+implemented_by Lean.Name.num => Lean.Name.num._override
+extern String.utf8ByteSize
+extern ByteArray.size
+extern String.toByteArray
+extern Nat.land
+extern Nat.shiftRight
+extern String.Internal.append
+implemented_by Nat.repr => Nat.reprFast
+extern String.ofList
+extern Char.ofNatAux
+extern panicCore
+extern Int.negSucc
+extern Int.ofNat
+extern Int.mul
+extern Int.add
+extern Int.sub
+extern Int.neg
+extern Int.decLt
+extern Int.decNonneg
+extern Int.decLe
+extern Int.ediv
+extern Int.natAbs
+extern Nat.gcd
+extern Nat.gcd._unary
+extern Int.decEq
+extern Int.emod
+implemented_by List.attachWith => _private.Init.Data.List.Attach.0.List.attachWithImpl

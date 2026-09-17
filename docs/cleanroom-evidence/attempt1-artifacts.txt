@@ -1,0 +1,7 @@
+
+FullName                                                                       Length
+--------                                                                       ------
+D:\Lean\jsp-000513-cleanroom\repo\.lake\config\1\lakefile.olean                722440
+D:\Lean\jsp-000513-cleanroom\repo\.lake\config\5\lakefile.olean                759728
+D:\Lean\jsp-000513-cleanroom\repo\.lake\packages\batteries\.lake\build.barrel 3297280
+
