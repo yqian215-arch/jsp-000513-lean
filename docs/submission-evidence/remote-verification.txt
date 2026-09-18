@@ -1,0 +1,9 @@
+Remote verification 2026-09-18:
+submission-hardening = 96285bc4defbeab71c11ff224890e16204c8c47c (matched local HEAD at verification)
+cleanroom-verification = f7ef7477619b081aa43eacde99ae0f32638897ba (unchanged)
+phase0-local = 8496ddb257bbdd9948417d3a98a563f2696cd47b (unchanged)
+Selected hardened source = 405b3a7cb332bfd28a8205d76d80b39165203e2b, contained in submission-hardening.
+No Lean/lockfile diff between selected source and verified branch tip.
+Subsequent checkpoint commit records this completed verification only.
+Five public-facing documents passed local link checks; no unresolved candidate SHA placeholder.
+Working tree was clean; no root LICENSE present; only docs/LICENSE_RECOMMENDATION.md.

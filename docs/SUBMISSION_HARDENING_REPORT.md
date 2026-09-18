@@ -89,3 +89,7 @@ Checkpoint commits: initialization `a91c8d0`, verified code stage `6cef517`. Eac
 All authorized engineering work is complete. Exact continuation: read this report and SUBMISSION_CHECKLIST.md, obtain the remaining user decisions, then apply only the approved license/publication/submission actions. Do not redo the proof or silently change the baseline. Any later Lean or lockfile changes require appropriate renewed validation.
 
 Operational issues resolved without source repair: a combined edit/build call was rejected by automatic policy review, so edits were applied as explicit patches and the build run separately; the patch tool rejected a same-call delete/add of README, resolved by separate operations; an official-repository Git metadata probe timed out while the official raw file downloads succeeded. None was a theorem failure.
+
+## Private remote confirmation
+
+The private submission-hardening branch was pushed and its remote tip was confirmed as `96285bc4defbeab71c11ff224890e16204c8c47c`, matching local HEAD at that check. It contains the selected source candidate `405b3a7cb332bfd28a8205d76d80b39165203e2b`; no Lean/lockfile changes followed that candidate. The next checkpoint commit only records this verification. `phase0-local` and `cleanroom-verification` still point to their original SHAs. See `submission-evidence/remote-verification.txt`. Public-facing document links were checked successfully; no candidate-SHA placeholder remains in current documentation.
