@@ -1,0 +1,106 @@
+[
+  {
+    "file": "JSP000513.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/C5General.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/C5Obstruction.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/C5Positive.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/ColorForcing.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/Definitions.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/FinalConstruction.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/FinsetTools.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/G1.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/G2.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/G3.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/G4.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/G5.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/GraphAssembly.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/ListColoring.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/MainTheorem.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/NineAttachment.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/PaletteEquivalence.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/Problem.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/Relaxed.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/SevenAttachment.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/StatementDrafts.lean",
+    "hits": []
+  },
+  {
+    "file": "JSP000513/TriangleTools.lean",
+    "hits": []
+  },
+  {
+    "file": "lakefile.toml",
+    "hits": []
+  },
+  {
+    "file": "scripts/Build.ps1",
+    "hits": []
+  },
+  {
+    "file": "scripts/Enter-Lean.ps1",
+    "hits": []
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "file": "JSP000513/C5General.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/C5Obstruction.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/C5Positive.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/ColorForcing.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/Definitions.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/FinalConstruction.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/FinsetTools.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/G1.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/G2.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/G3.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/G4.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/G5.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/GraphAssembly.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/ListColoring.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/MainTheorem.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/NineAttachment.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/PaletteEquivalence.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/Relaxed.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/SevenAttachment.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/StatementDrafts.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  },
+  {
+    "file": "JSP000513/TriangleTools.lean",
+    "unchanged_code_after_exact_allowed_omit_and_comment_removal": true
+  }
+]

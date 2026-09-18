@@ -123,3 +123,6 @@ GitHub API 在本次提交前再次确认 private=true、visibility=private，�
 
 ## Submission-hardening code stage (2026-09-18)
 Independent branch submission-hardening from proof 8496ddb257bbdd9948417d3a98a563f2696cd47b. Wrapper and three unused-instance warnings addressed; lake build 828 jobs exit 0, wrapper-only check exit 0, standard axioms only. See SUBMISSION_HARDENING_REPORT.md and submission-evidence for ongoing stage status.
+
+## Submission-hardening regression complete (2026-09-18)
+Build and standalone wrapper pass; complete axiom closure, unchanged clean-room graph/list harness, and fresh kernel replay all exit 0. Production scan: 26 files, zero hits. All 21 existing module proof bodies preserved modulo comment/unused-instance cleanup. English README, attribution, licensing recommendation and official checklist prepared. No LICENSE, visibility change, PR, issue or award claim. Detailed results and human release gates: SUBMISSION_HARDENING_REPORT.md.

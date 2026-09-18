@@ -1,0 +1,85 @@
+diff --git a/JSP000513.lean b/JSP000513.lean
+index 36667e8..487f7c4 100644
+--- a/JSP000513.lean
++++ b/JSP000513.lean
+@@ -9,6 +9,7 @@ import JSP000513.G4
+ import JSP000513.G5
+ import JSP000513.MainTheorem
+ import JSP000513.PaletteEquivalence
++import JSP000513.Problem
+ 
+ -- Kernel dependency audit, including the complete main theorem.
+ #print axioms JSP000513.C5.lists_card
+@@ -59,3 +60,5 @@ import JSP000513.PaletteEquivalence
+ #print JSP000513.Theorem2NatTarget
+ #print JSP000513.Theorem2AllPalettesTarget
+ #print JSP000513.FinitePaletteEquivalenceTarget
++
++#print axioms JSP000513.list_choosability_doubling_is_false
+diff --git a/JSP000513/C5Obstruction.lean b/JSP000513/C5Obstruction.lean
+index b9a6ddb..eac2fcd 100644
+--- a/JSP000513/C5Obstruction.lean
++++ b/JSP000513/C5Obstruction.lean
+@@ -9,7 +9,8 @@ import Mathlib.Data.Fintype.Fin
+ Source: Dvořák–Hu–Sereni, arXiv:1806.03880v2, p. 3, Figure 1 (left).
+ Index `i : Fin 5` represents the paper's vertex `v_(i+1)`.
+ All finite decisions below are reduced and checked by the Lean kernel.
+-The positive half of Lemma 3 and Theorem 2 are outside this PoC.
++The positive half is proved in C5Positive.lean; the full finite-graph
++counterexample is assembled in MainTheorem.lean.
+ -/
+ 
+ namespace JSP000513.C5
+diff --git a/JSP000513/FinsetTools.lean b/JSP000513/FinsetTools.lean
+index 3c96add..de93751 100644
+--- a/JSP000513/FinsetTools.lean
++++ b/JSP000513/FinsetTools.lean
+@@ -16,6 +16,7 @@ theorem exists_mem_avoiding_pair (S : Finset α) (hS : 3 ≤ S.card) (a b : α)
+   obtain ⟨c,hc,hn⟩ := Finset.not_subset.mp hnot
+   exact ⟨c,hc,fun h => hn (by simp [h]),fun h => hn (by simp [h])⟩
+ 
++omit [DecidableEq α] in
+ theorem exists_mem_of_card_lt (S T : Finset α) (h : T.card < S.card) :
+     ∃ c ∈ S, c ∉ T := by
+   apply Finset.not_subset.mp
+diff --git a/JSP000513/NineAttachment.lean b/JSP000513/NineAttachment.lean
+index 295deec..c81700c 100644
+--- a/JSP000513/NineAttachment.lean
++++ b/JSP000513/NineAttachment.lean
+@@ -13,6 +13,7 @@ theorem lists_card (v : Fin 3) : (lists v).card = 2 * halfSizes v := by
+ universe u
+ variable {Color : Type u} [DecidableEq Color]
+ 
++omit [DecidableEq Color] in
+ theorem vector_coloring (L : Fin 3 → Finset Color) (a b c : Color)
+     (ha : a ∈ L 0) (hb : b ∈ L 1) (hc : c ∈ L 2)
+     (hab : a ≠ b) (hac : a ≠ c) (hbc : b ≠ c) :
+@@ -61,6 +62,7 @@ theorem lists_card (v : Vertex) : (lists v).card = 2 * halfSizes v := by
+ universe u
+ variable {Color : Type u} [DecidableEq Color]
+ 
++omit [DecidableEq Color] in
+ theorem combine_coloring (L : Vertex → Finset Color)
+     (f : Fin 3 → Color) (g : Fin 2 → Fin 3 → Color)
+     (hf : IsListColoring Triangle.graph (L ∘ Sum.inl) f)
+diff --git a/JSP000513/Problem.lean b/JSP000513/Problem.lean
+new file mode 100644
+index 0000000..e935d89
+--- /dev/null
++++ b/JSP000513/Problem.lean
+@@ -0,0 +1,15 @@
++import JSP000513.MainTheorem
++
++namespace JSP000513
++
++/-- JSP-000513 has a negative answer: even among finite graphs,
++(4:1)-choosability does not always imply (8:2)-choosability.
++The contradiction uses the same finite graph supplied by DHS19 Theorem 2. -/
++theorem list_choosability_doubling_is_false :
++    ¬ (∀ (n : ℕ) (G : SimpleGraph (Fin n)),
++      ABChoosable G 4 1 → ABChoosable G 8 2) := by
++  intro h
++  obtain ⟨n, G, h4, h82⟩ := theorem2
++  exact h82 (h n G h4)
++
++end JSP000513

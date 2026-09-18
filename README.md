@@ -1,34 +1,62 @@
-# JSP-000513 — 完整 Lean 证明
+# JSP-000513: list choosability does not survive doubling
 
-已证明：**存在有限简单图，它是 4-choosable，但不是 (8:2)-choosable。** 采用 Dvořák–Hu–Sereni 论文的 C5 → G1/G2 → G3 → G4 → G5 → K4 副本构造。
+This Lean project formalizes a negative answer to [JSP-000513](https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0501-0600.md#JSP-000513): doubling both the available-list size and the required number of colors per vertex does not always preserve list choosability. One finite simple graph is (4:1)-choosable and is not (8:2)-choosable.
 
-- 完整主定理：[`JSP000513.theorem2`](JSP000513/MainTheorem.lean)。图的顶点类型为 `Fin n`，正面量化全部四元列表，负面给出八元列表障碍。
-- 任意调色板版本：`theorem2_all_palettes`；有限图上自然数颜色与任意颜色类型的等价：[`finitePaletteEquivalence`](JSP000513/PaletteEquivalence.lean)。
-- 全部主定理仅依赖 Lean/Mathlib 标准公理 `propext`、`Classical.choice`、`Quot.sound`。无证明占位、额外未经证明公理或外部求解器证书。
+The mathematical proof is due to **Zdeněk Dvořák, Xiaolan Hu, and Jean-Sébastien Sereni**, *A 4-choosable Graph that is Not (8:2)-choosable*, Advances in Combinatorics 2019:5, [DOI](https://doi.org/10.19086/aic.10811), [arXiv v2](https://arxiv.org/abs/1806.03880v2). The formalization follows the C5 → G1/G2 → G3 → G4 → G5 → uniform-list construction.
 
-## 复现
+## Main declarations
 
-在家用 Windows 的 `D:\Lean\jsp-000513-lean`：
+| Declaration (namespace `JSP000513`) | File | Meaning |
+|---|---|---|
+| `list_choosability_doubling_is_false` | [Problem.lean](JSP000513/Problem.lean) | Negates the universal doubling implication on finite graphs |
+| `theorem2` | [MainTheorem.lean](JSP000513/MainTheorem.lean) | A single finite graph with both properties |
+| `theorem2_all_palettes` | [MainTheorem.lean](JSP000513/MainTheorem.lean) | The same witness, arbitrary palettes on the positive side |
+| `finitePaletteEquivalence` | [PaletteEquivalence.lean](JSP000513/PaletteEquivalence.lean) | Natural colors suffice for finite graphs with arbitrary palettes |
 
-```powershell
-. .\scripts\Enter-Lean.ps1
+The direct problem statement is:
+
+```lean
+¬ (∀ (n : ℕ) (G : SimpleGraph (Fin n)),
+  JSP000513.ABChoosable G 4 1 → JSP000513.ABChoosable G 8 2)
+```
+
+`ABChoosable` quantifies over every list assignment of the specified cardinality. A coloring selects exactly the required number of colors at each vertex, with disjoint sets on every edge. See [Definitions.lean](JSP000513/Definitions.lean).
+
+## Reproducible build
+
+Install Elan/Lean and Git, clone this repository with authorized access while it remains private, and run from its root:
+
+```text
+git checkout submission-hardening
+git rev-parse HEAD
 lake build
 ```
 
-固定 Lean/Mathlib v4.34.0，依赖提交保存在 `lake-manifest.json`。本机安装与缓存路径见 [environment.md](docs/environment.md)。根入口导入全部证明并打印主定理、公理依赖与目标命题。
+For review, check out the full 40-character source commit in [SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md), rather than relying on a moving branch. Lean is pinned to **v4.34.0** in `lean-toolchain`; Mathlib **v4.34.0** is pinned at `5ed2965256430c3649e86755f9576b54eca72435`. All dependency revisions are in `lake-manifest.json`. Do not run `lake update` to reproduce that version.
 
-## 验证记录
+For source builds without downloaded compilation caches, use a fresh clone and PowerShell:
 
-- [最终验证与语义审计](docs/FINAL_VERIFICATION.md)
-- [命题与源码对应](docs/theorem_mapping.md)
-- [已完成证明依赖树](docs/proof_dependency.md)
-- [逐阶段进度与提交](docs/PROGRESS.md)
-- [最终构建输出](docs/validation/final-build.log)
+```powershell
+$env:MATHLIB_NO_CACHE_ON_UPDATE = '1'
+$env:LAKE_NO_CACHE = 'true'
+$env:LAKE_ARTIFACT_CACHE = 'false'
+$env:MATHLIB_CACHE_DIR = Join-Path $PWD 'work/mathlib-cache'
+$env:LAKE_CACHE_DIR = Join-Path $PWD 'work/lake-cache'
+lake --no-cache build
+```
 
-早期 Phase 0 文档保留为历史记录，不代表当前证明范围。
+This still uses the installed Lean toolchain/standard library. The legacy `scripts/Enter-Lean.ps1` convenience script contains maintainer-host paths and is not required for a normal checkout.
 
-## 来源与保存
+## Verification and current status
 
-[JSP-000513 官方题库固定版本](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0501-0600.md)；[DHS19 论文 v2](https://arxiv.org/pdf/1806.03880v2)。本成果证明其反例存在性，即对倍增保持问题给出否定答案。
+Proof baseline `8496ddb257bbdd9948417d3a98a563f2696cd47b` has two recorded verification layers: [project verification](docs/FINAL_VERIFICATION.md) and [independent clean-room verification](docs/CLEANROOM_VERIFICATION.md). The latter rebuilt dependencies in a separate clone, checked theorem fidelity and complete gadget edge/list data, traversed proof dependencies, and replayed declarations in a fresh Lean kernel environment. Its shared-toolchain and interrupted/resumed-build limitations are documented. These are engineering records, not independent human peer review or prize approval.
 
-源码在家用电脑完成，已授权备份至私有 `yqian215-arch/jsp-000513-lean` 的 `phase0-local` 分支。未更改可见性、公开发布或提交官方奖项。本地 Lean 验证与官方审核是不同事项。
+[Submission hardening](docs/SUBMISSION_HARDENING_REPORT.md) adds the direct wrapper, removes stale comments and three unused-instance warnings, and records regression results without restructuring the mathematical construction. Historical reports describe their own versions; the hardening report describes the current candidate.
+
+**As of 2026-09-18 this repository remains Private. This workflow has not submitted a catalog PR, claim issue, or formal award application.** Publication and formal submission require separate maintainer authorization.
+
+## Attribution and licensing
+
+**`yqian215-arch`** initiated and organized the project, maintains it, and prepares its submission. OpenAI ChatGPT Work/Codex was used extensively for Lean code generation, debugging, and formalization engineering. We do not claim that the maintainer manually wrote every line or authored the DHS19 mathematical proof. See [ATTRIBUTION.md](ATTRIBUTION.md).
+
+No project LICENSE has been selected. [LICENSE_RECOMMENDATION.md](docs/LICENSE_RECOMMENDATION.md) presents options for the maintainer. Third-party licenses retain their own scope. [SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md) records publication, contact, attribution, and application gates.
