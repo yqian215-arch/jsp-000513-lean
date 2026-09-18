@@ -2,7 +2,7 @@
 
 **结论：PASS（数学/形式化与本次可复现构建）；WARNING（环境与文档事项）。可以进入 submission-hardening。**
 
-这是对固定提交 `8496ddb257bbdd9948417d3a98a563f2696cd47b` 的独立验证，不是开发工作。没有发现需要停止验证的实质性数学或形式化错误。没有修改证明逻辑、`lean-toolchain`、`lakefile.toml` 或 `lake-manifest.json`。PASS 仅限下表已完成范围；不等于正式提交、奖项资格或人工同行审稿认证。
+这是对固定提交 `83644d1838aadee8fc7acd9150c610aff5402ba7` 的独立验证，不是开发工作。没有发现需要停止验证的实质性数学或形式化错误。没有修改证明逻辑、`lean-toolchain`、`lakefile.toml` 或 `lake-manifest.json`。PASS 仅限下表已完成范围；不等于正式提交、奖项资格或人工同行审稿认证。
 
 最后更新：2026-09-18，Asia/Shanghai。全部要求的验证已完成，附加 fresh 内核重放亦 PASS。
 
@@ -78,7 +78,7 @@
 ```powershell
 git clone https://github.com/yqian215-arch/jsp-000513-lean.git D:\Lean\jsp-000513-cleanroom\repo
 Set-Location D:\Lean\jsp-000513-cleanroom\repo
-git checkout --detach 8496ddb257bbdd9948417d3a98a563f2696cd47b
+git checkout --detach 83644d1838aadee8fc7acd9150c610aff5402ba7
 git rev-parse HEAD
 # 选择尚不存在的独立验证分支名；本次使用 cleanroom-verification。
 git switch -c cleanroom-verification
@@ -207,7 +207,7 @@ lake --no-cache env leanchecker --fresh --verbose JSP000513
 
 - `lake --no-cache env leanchecker --fresh --verbose JSP000513` 已完成：`2026-09-18T07:25:17.4353515+08:00`，**exit=0**，输出 `replaying JSP000513 with --fresh`。命令、输出及退出码保存在 `cleanroom-evidence/kernel-replay-*`。这调用同一锁定 Lean 内核，将导入和项目常量在空环境重新 replay，进一步检查环境污染/绕过；它不是不同实现的外部验证器。
 - 完整传递依赖名称表也已纳入 `cleanroom-evidence/closure-*.txt`，不只留在外置目录。
-- 最终执行 `git diff --exit-code 8496ddb257bbdd9948417d3a98a563f2696cd47b -- lean-toolchain lakefile.toml lake-manifest.json JSP000513.lean JSP000513`，**exit=0**。9 个依赖工作树均无变更。
+- 最终执行 `git diff --exit-code 83644d1838aadee8fc7acd9150c610aff5402ba7 -- lean-toolchain lakefile.toml lake-manifest.json JSP000513.lean JSP000513`，**exit=0**。9 个依赖工作树均无变更。
 - 所有本次要求的数学与形式化验证步骤已经完成；此前 checkpoint 的“下一步”是历史记录，现已完成。后续接续点仅为 submission-hardening，不需要重做本次验证，除非证明或锁定配置改变。
 - 附加工具探测说明：曾直接调用 `leanchecker --help`，该程序不实现 help 选项，并按包名推测成 `Jsp000513`，提示找不到模块。读其官方随工具链源码后，采用显式模块名及 `lake env` 的上述命令成功。该探测失败不是证明失败。
 

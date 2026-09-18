@@ -32,7 +32,7 @@ git rev-parse HEAD
 lake build
 ```
 
-For review, check out the full 40-character source commit in [SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md), rather than relying on a moving branch. Lean is pinned to **v4.34.0** in `lean-toolchain`; Mathlib **v4.34.0** is pinned at `5ed2965256430c3649e86755f9576b54eca72435`. All dependency revisions are in `lake-manifest.json`. Do not run `lake update` to reproduce that version.
+For review, use the frozen publication candidate described in [PUBLICATION_CANDIDATE.md](docs/PUBLICATION_CANDIDATE.md) and record its full 40-character SHA, rather than relying on a moving branch. Lean is pinned to **v4.34.0** in `lean-toolchain`; Mathlib **v4.34.0** is pinned at `5ed2965256430c3649e86755f9576b54eca72435`. All dependency revisions are in `lake-manifest.json`. Do not run `lake update` to reproduce that version.
 
 For source builds without downloaded compilation caches, use a fresh clone and PowerShell:
 
@@ -49,14 +49,16 @@ This still uses the installed Lean toolchain/standard library. The legacy `scrip
 
 ## Verification and current status
 
-Proof baseline `8496ddb257bbdd9948417d3a98a563f2696cd47b` has two recorded verification layers: [project verification](docs/FINAL_VERIFICATION.md) and [independent clean-room verification](docs/CLEANROOM_VERIFICATION.md). The latter rebuilt dependencies in a separate clone, checked theorem fidelity and complete gadget edge/list data, traversed proof dependencies, and replayed declarations in a fresh Lean kernel environment. Its shared-toolchain and interrupted/resumed-build limitations are documented. These are engineering records, not independent human peer review or prize approval.
+Proof baseline `83644d1838aadee8fc7acd9150c610aff5402ba7` has two recorded verification layers: [project verification](docs/FINAL_VERIFICATION.md) and [independent clean-room verification](docs/CLEANROOM_VERIFICATION.md). The latter rebuilt dependencies in a separate clone, checked theorem fidelity and complete gadget edge/list data, traversed proof dependencies, and replayed declarations in a fresh Lean kernel environment. Its shared-toolchain and interrupted/resumed-build limitations are documented. These are engineering records, not independent human peer review or prize approval.
 
 [Submission hardening](docs/SUBMISSION_HARDENING_REPORT.md) adds the direct wrapper, removes stale comments and three unused-instance warnings, and records regression results without restructuring the mathematical construction. Historical reports describe their own versions; the hardening report describes the current candidate.
 
 **As of 2026-09-18 this repository remains Private. This workflow has not submitted a catalog PR, claim issue, or formal award application.** Publication and formal submission require separate maintainer authorization.
 
+Before formal publication, Git history underwent a metadata rewrite solely to remove a private commit email. File trees and Lean proof content were unchanged. Historical commit references in the current documents have been synchronized to the rewritten history.
+
 ## Attribution and licensing
 
 **`yqian215-arch`** initiated and organized the project, maintains it, and prepares its submission. OpenAI ChatGPT Work/Codex was used extensively for Lean code generation, debugging, and formalization engineering. We do not claim that the maintainer manually wrote every line or authored the DHS19 mathematical proof. See [ATTRIBUTION.md](ATTRIBUTION.md).
 
-No project LICENSE has been selected. [LICENSE_RECOMMENDATION.md](docs/LICENSE_RECOMMENDATION.md) presents options for the maintainer. Third-party licenses retain their own scope. [SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md) records publication, contact, attribution, and application gates.
+This project has adopted **Apache License 2.0**; see [LICENSE](LICENSE). [LICENSE_RECOMMENDATION.md](docs/LICENSE_RECOMMENDATION.md) records the selected license and the historical comparison. Third-party licenses retain their own scope. [SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md) records publication, contact, attribution, and application gates.

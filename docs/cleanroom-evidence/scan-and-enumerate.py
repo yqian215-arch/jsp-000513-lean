@@ -1,7 +1,7 @@
 from pathlib import Path
 import re,json,hashlib,subprocess
 root=Path(r'D:\Lean\jsp-000513-cleanroom\repo');out=root/'docs/cleanroom-evidence'
-files=subprocess.check_output(['git','ls-tree','-r','--name-only','8496ddb257bbdd9948417d3a98a563f2696cd47b'],cwd=root,text=True).splitlines()
+files=subprocess.check_output(['git','ls-tree','-r','--name-only','83644d1838aadee8fc7acd9150c610aff5402ba7'],cwd=root,text=True).splitlines()
 pat=re.compile(r'\b(?:sorry|admit|sorryAx|axiom|unsafe|native_decide|implemented_by|extern|partial)\b|debug\.skipKernelTC|trustLevel|ofReduceBool|\b(?:TODO|FIXME|placeholder)\b',re.I)
 def classify(s):
  mask=['code']*len(s);i=0;depth=0

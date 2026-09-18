@@ -4,7 +4,7 @@
 - Scope: fully prove the existence of a finite 4-choosable graph that is not (8:2)-choosable, following DHS19. The user explicitly expanded the scope beyond Phase 0 on 2026-09-17.
 - Read README.md and docs/ before extending the project.
 - User authorized pushing verified, locally committed progress to this repository only when its visibility is confirmed Private. Recheck visibility before the first push. Do not publish, submit an award application, or change visibility without authorization.
-- At initial inspection on 2026-09-17, GitHub reported the remote as Public. Do not assume it is Private.
+- GitHub confirmed the remote as Private on 2026-09-18. Recheck visibility before pushing; publication still requires explicit authorization.
 - No `sorry`, `admit`, new unproved axioms, or weakened target statements. Intermediate unproved targets must not be used as assumptions.
 - Match quantifiers and all hypotheses to the original paper; distinguish proven results from conjectures.
 - Use the pinned Lean and Mathlib version. Dot-source scripts/Enter-Lean.ps1 in PowerShell, then run lake build.

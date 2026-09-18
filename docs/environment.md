@@ -1,6 +1,8 @@
-# 家用 Windows 环境记录
+# Windows environment and current repository status
 
-检查日期：2026-09-17（Asia/Shanghai）。所有终端与文件操作均在当前家用 Windows 主机执行，没有连接办公电脑或远程执行主机。
+Current repository status verified on 2026-09-18 (Asia/Shanghai): **Private**, branch `submission-hardening`, Apache-2.0 adopted. Publication, catalog PR, and award claim have not been performed by this workflow. See PUBLICATION_CANDIDATE.md for the frozen candidate.
+
+The toolchain installation details below were recorded on 2026-09-17 on the same Windows host. The original proof checkout and current clean-room checkout are distinguished explicitly; these are local convenience paths, not build requirements.
 
 ## 路径与版本
 
@@ -8,9 +10,10 @@
 | --- | --- |
 | Windows | Windows 11 专业版，10.0.22631，64 位 |
 | PowerShell | 7.6.5 |
-| 仓库 | `D:\Lean\jsp-000513-lean` |
-| 本地分支 | `phase0-local` |
-| 初始提交 | `535de844126b4b977e6615c6eb32d80a0b226302` |
+| Original proof checkout (historical) | `D:\Lean\jsp-000513-lean` |
+| Current verification/publication checkout | `D:\Lean\jsp-000513-cleanroom\repo` |
+| Current branch | `submission-hardening` |
+| 初始提交 | `c879d83654a8fdef4be8646b491da967f4fbacbb` |
 | 远程 | `https://github.com/yqian215-arch/jsp-000513-lean.git` |
 | Git | 2.53.0.windows.3（桌面应用提供的本地 Git） |
 | elan | 4.2.4，安装于 `D:\Lean\tools\elan` |
@@ -23,16 +26,14 @@
 
 ## GitHub 检查
 
-已通过已连接 GitHub 插件读取目标仓库，返回 `pull/push/admin` 等权限为 true。此为连接器权限检查，不代表本地 Git 已配置写入凭据；本阶段未测试推送。
-
-**实际可见性为 Public**，与之前聊天中预期的 Private 不符。本次没有更改可见性，没有远程写入、push、奖项提交。原始远程仅有 README；新增成果只在本地。
+GitHub metadata confirms that `yqian215-arch/jsp-000513-lean` is **Private** and the connected account has push permission. Verified work has been pushed to the private project branches. The earlier installation-stage visibility and local-only status are superseded by this current check. No change to Public is authorized.
 
 ## 进入环境和构建
 
 在 PowerShell 中：
 
 ```powershell
-Set-Location -LiteralPath 'D:\Lean\jsp-000513-lean'
+Set-Location -LiteralPath 'D:\Lean\jsp-000513-cleanroom\repo'
 . .\scripts\Enter-Lean.ps1
 lean --version
 lake --version
@@ -53,4 +54,4 @@ lake build
 
 随后执行 `lake exe cache get Mathlib.Combinatorics.SimpleGraph.Coloring.Vertex Mathlib.Data.Finset.Powerset Mathlib.Tactic`，全部 3,100 个请求文件下载、解压成功，退出 0；日志为 `work/mathlib-cache.log`。这是所请求模块及其传递依赖的缓存，并非宣称整个 Mathlib 都已经本地编译。
 
-最终项目证明的实际构建状态见 `phase0_status.md` 与 `poc_verification.md`。
+Current complete-proof and regression status: `FINAL_VERIFICATION.md`, `CLEANROOM_VERIFICATION.md`, and `SUBMISSION_HARDENING_REPORT.md`. `phase0_status.md` and `poc_verification.md` are historical milestones, not the current project scope.

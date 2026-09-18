@@ -20,13 +20,13 @@
 
 ## 阶段 0
 
-此前 C5 负面 PoC 已通过；继续前重新构建并保存审计输出。远程初始提交为 535de844126b4b977e6615c6eb32d80a0b226302。当前 Git 无作者身份配置，本地提交使用明确的代理身份 `Codex <codex@localhost>`，不冒用用户身份、不配置远程凭据。
+此前 C5 负面 PoC 已通过；继续前重新构建并保存审计输出。远程初始提交为 c879d83654a8fdef4be8646b491da967f4fbacbb。当前 Git 无作者身份配置，本地提交使用明确的代理身份 `Codex <codex@localhost>`，不冒用用户身份、不配置远程凭据。
 
 阶段0结果：lake build 退出0；六个已证引理的公理只有 propext、Classical.choice、Quot.sound（或其子集）。原始输出 docs/validation/stage0-build.log。基线保存后立即进入阶段1。
 
 ## 中断前保存与远程备份规则
 
-用户要求额度耗尽或被迫中断前保存全部源码、更新本文件、执行可行构建、本地提交，并 push 已验证进度至私有仓库。当前已验证提交：`d77e9d8`（基线）、`e02a7c9`（Lemma 3 正面与普通染色桥梁）。
+用户要求额度耗尽或被迫中断前保存全部源码、更新本文件、执行可行构建、本地提交，并 push 已验证进度至私有仓库。当前已验证提交：`34c3ddca97772b26a30172d5461b1c9a1dff6cc8`（基线）、`4cc7fbc9ed9ac72dcc9b3faebab602f40e76e530`（Lemma 3 正面与普通染色桥梁）。
 
 最新 GitHub 连接器复查仍返回 `visibility=public`，因此未推送；已请用户先将仓库改为 Private。该前置条件只阻止远程备份，不阻止本地形式化。后续执行者必须重新核实可见性后再 push，并记录实际远端提交及分支。
 
@@ -44,7 +44,7 @@
 
 远程备份更新：用户已确认改为 Private 并重授权。连接器仍返回404；本地 Git 的非交互检查确认无可用凭据，已启动 Git Credential Manager 设备登录（尚未返回授权码/完成状态）。阶段提交均已本地保存，尚无成功 push 记录，不得误报远程备份完成。
 
-远程备份已恢复：本地 Git Credential Manager 登录成功；通过 GitHub API 使用本地 Git 凭据核实 private=true、visibility=private、push_permission=true。首次 push 已成功，远端分支 phase0-local 包含截至 8f58279 的全部已验证提交。后续仍只推送已验证阶段，不公开仓库或提交奖项。连接器404不再阻碍本地 Git 备份。
+远程备份已恢复：本地 Git Credential Manager 登录成功；通过 GitHub API 使用本地 Git 凭据核实 private=true、visibility=private、push_permission=true。首次 push 已成功，远端分支 phase0-local 包含截至 56cbb5d95632afcec8fb290de76b0aa5757fba4c 的全部已验证提交。后续仍只推送已验证阶段，不公开仓库或提交奖项。连接器404不再阻碍本地 Git 备份。
 
 ## 阶段 3a — 已完成（Lemma 5 前置）
 
@@ -80,7 +80,7 @@ lake build 退出0（813 jobs）；五项附件/G3审计只有 propext、Classic
 
 ## 阶段 5 — 已完成（DHS19 Lemma 7 / G4）
 
-额度恢复后从 cd0a418 继续。新增 TriangleTools 的两个选色引理和坏删除至多一个的基数证明；NineAttachment 用三个三角形实现任意新边界预着色的扩展与固定旧边界的贪心扩展。G4 为 G3 与九顶点附件的连接，已证明 StrongRelaxed 和两个末端均强制为{7,8}，未使用额外数学假设。
+额度恢复后从 6b4bf036a5490a62328632cfeb58c449843b2022 继续。新增 TriangleTools 的两个选色引理和坏删除至多一个的基数证明；NineAttachment 用三个三角形实现任意新边界预着色的扩展与固定旧边界的贪心扩展。G4 为 G3 与九顶点附件的连接，已证明 StrongRelaxed 和两个末端均强制为{7,8}，未使用额外数学假设。
 
 lake build 退出0（816 jobs）。新增六项公理审计仅 propext、Classical.choice、Quot.sound，见 docs/validation/stage5-build.log。源码 TriangleTools.lean、NineAttachment.lean、G4.lean。继续 Lemma 8 的 G5：共享 G1 的0、2与G4的 first、third，其余五点另建；先组合半列表正面证明，再把负面染色限制到 G1。远程备份沿用已验证为 Private 的 origin/phase0-local；未消耗重置券。
 
@@ -106,23 +106,26 @@ MainTheorem.lean 通过顶点等价重编号得到 Fin n 图，已证明 JSP0005
 
 最终 lake build 退出0（827 jobs）；三个最终定理公理依赖均只有 propext、Classical.choice、Quot.sound。原始输出 docs/validation/final-build.log。项目 Lean 源码无 sorry、admit、sorryAx、axiom、unsafe、native_decide 匹配；三个多余 DecidableEq 参数警告无碍证明。README、theorem_mapping、proof_dependency 已更新为完整结果；最终复现与语义检查见 docs/FINAL_VERIFICATION.md。
 
-远程情况：G4 f15efde、G5 7e9ec59 已推送；主定理363d59f第一次push遭遇网络连接重置，源码和提交未丢失。最终保存后重试推送全部提交并核对远端。当前数学与Lean证明目标已达到，完成状态只待最终提交和私有远程备份确认；不执行公开或奖项提交。
+远程情况：G4 3d038a3cb659f48ee2106bbd3df8e4c1445b42af、G5 b352060da80a8ca5058d9ea59b9f66c28d8bc895 已推送；主定理b66f1eda7a2de086993981e26abe112b9b8fb03f第一次push遭遇网络连接重置，源码和提交未丢失。最终保存后重试推送全部提交并核对远端。当前数学与Lean证明目标已达到，完成状态只待最终提交和私有远程备份确认；不执行公开或奖项提交。
 
 
 ## 最终远程确认 — 已完成
 
-2026-09-18：GitHub API 再次确认 yqian215-arch/jsp-000513-lean 为 private=true、visibility=private。完整证明及最终审计提交 79076f593efaba56923ffaeef2de935757090e3b 的本地 HEAD 与远端 refs/heads/phase0-local 完全一致，工作区干净。主定理363d59f也已包含在远端历史中；此前连接重置已恢复。此后的记录提交仅保存本段备份确认。完整形式化、构建、公理审计、本地提交及私有备份要求均已完成。无待证明的主命题依赖，未公开或提交官方奖项。
+2026-09-18：GitHub API 再次确认 yqian215-arch/jsp-000513-lean 为 private=true、visibility=private。完整证明及最终审计提交 bb09c6ceed0202204e2a1927d7bde5ff91a9f2b8 的本地 HEAD 与远端 refs/heads/phase0-local 完全一致，工作区干净。主定理b66f1eda7a2de086993981e26abe112b9b8fb03f也已包含在远端历史中；此前连接重置已恢复。此后的记录提交仅保存本段备份确认。完整形式化、构建、公理审计、本地提交及私有备份要求均已完成。无待证明的主命题依赖，未公开或提交官方奖项。
 
 ## 用户要求的全量检查与再次备份 — 2026-09-18
 
-检查起点 e105ad1：51个已跟踪文件，初始 Git status 干净，无未跟踪待纳入文件。Lean 源码、README、theorem_mapping、proof_dependency、构建与公理日志、PROGRESS 以及工具链和依赖锁定文件已全部跟踪。.lake/ 与 work/ 被忽略，跟踪文件中没有编译产物、私钥文件或凭据目录。对全部跟踪文本扫描常见 GitHub/API token、私钥头、URL内凭据及密码/密钥赋值模式，没有发现匹配；这是内容模式检查，不作超出检查范围的保证。
+检查起点 d0b31ec6f72bb5c9e5e6f534b27d0845275a25a2：51个已跟踪文件，初始 Git status 干净，无未跟踪待纳入文件。Lean 源码、README、theorem_mapping、proof_dependency、构建与公理日志、PROGRESS 以及工具链和依赖锁定文件已全部跟踪。.lake/ 与 work/ 被忽略，跟踪文件中没有编译产物、私钥文件或凭据目录。对全部跟踪文本扫描常见 GitHub/API token、私钥头、URL内凭据及密码/密钥赋值模式，没有发现匹配；这是内容模式检查，不作超出检查范围的保证。
 
 再次 lake build 退出0（827 jobs），日志 docs/validation/recheck-build.log。三个最终定理 theorem2、theorem2_all_palettes、finitePaletteEquivalence 公理仍仅标准三项。当前源文件、构建配置、锁定依赖及脚本的 SHA256 清单为 docs/validation/current-source-sha256.txt；原 source-sha256.txt 保留为早期检查历史。
 
 GitHub API 在本次提交前再次确认 private=true、visibility=private，备份目标仍为 origin/phase0-local。新增检查日志、校验清单和本段记录一并提交推送。当前完整主定理已经证明，无缺失的主形式化步骤；后续不把已完成结果重新描述为只有 Phase 0 或 PoC。
 
 ## Submission-hardening code stage (2026-09-18)
-Independent branch submission-hardening from proof 8496ddb257bbdd9948417d3a98a563f2696cd47b. Wrapper and three unused-instance warnings addressed; lake build 828 jobs exit 0, wrapper-only check exit 0, standard axioms only. See SUBMISSION_HARDENING_REPORT.md and submission-evidence for ongoing stage status.
+Independent branch submission-hardening from proof 83644d1838aadee8fc7acd9150c610aff5402ba7. Wrapper and three unused-instance warnings addressed; lake build 828 jobs exit 0, wrapper-only check exit 0, standard axioms only. See SUBMISSION_HARDENING_REPORT.md and submission-evidence for ongoing stage status.
 
 ## Submission-hardening regression complete (2026-09-18)
-Build and standalone wrapper pass; complete axiom closure, unchanged clean-room graph/list harness, and fresh kernel replay all exit 0. Production scan: 26 files, zero hits. All 21 existing module proof bodies preserved modulo comment/unused-instance cleanup. English README, attribution, licensing recommendation and official checklist prepared. No LICENSE, visibility change, PR, issue or award claim. Detailed results and human release gates: SUBMISSION_HARDENING_REPORT.md.
+Build and standalone wrapper pass; complete axiom closure, unchanged clean-room graph/list harness, and fresh kernel replay all exit 0. Production scan: 26 files, zero hits. All 21 existing module proof bodies preserved modulo comment/unused-instance cleanup. English README, attribution, licensing recommendation and official checklist prepared. At that historical stage no LICENSE had yet been added. Apache-2.0 has since been adopted; no visibility change, PR, issue or award claim was performed by this workflow. Detailed results and human release gates: SUBMISSION_HARDENING_REPORT.md.
+
+## Publication-document cleanup — 2026-09-18
+Synchronized full and abbreviated project commit references using the verified email-rewrite mapping; no old SHA mapping is published. Updated README, license decision, checklist, environment status, and hardening report for adopted Apache-2.0 and Private visibility. Added PUBLICATION_CANDIDATE.md to identify the frozen final candidate. No Lean source, lockfile, or toolchain/build configuration changes. lake build and the existing axiom audit both exit 0; only the standard three axioms remain. Current tracked text and reachable history privacy scans and remote-ref checks are recorded in the external publication-cleanup evidence. The final 40-character SHA is recorded externally after the single documentation commit/push; no further candidate changes are planned absent an issue.

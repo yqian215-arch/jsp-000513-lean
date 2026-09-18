@@ -2,7 +2,7 @@ from pathlib import Path
 import subprocess, json, re, hashlib
 root=Path.cwd()
 out=root/'docs/submission-evidence'
-base='8496ddb257bbdd9948417d3a98a563f2696cd47b'
+base='83644d1838aadee8fc7acd9150c610aff5402ba7'
 def git(*a): return subprocess.check_output(['git',*a],cwd=root)
 def strip_comments(s):
     s=re.sub(r'/\-.*?\-/', '', s, flags=re.S)

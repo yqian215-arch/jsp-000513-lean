@@ -2,9 +2,9 @@
 
 **Technical result: PASS. A private, submission-ready candidate has been prepared.**
 
-**Ready for public review:** technically prepared, but release-gated. The repository is still Private, no LICENSE has been adopted, and public contact/publication/formal submission decisions remain with the maintainer. This is not a claim that anonymous reviewers can currently access the source, or that the prize has accepted the contribution.
+**Ready for public review:** technically prepared, but release-gated. The repository is still Private, Apache-2.0 has been adopted, and public contact/publication/formal submission decisions remain with the maintainer. This is not a claim that anonymous reviewers can currently access the source, or that the prize has accepted the contribution.
 
-Completed 2026-09-18 (Asia/Shanghai). Proof baseline: `8496ddb257bbdd9948417d3a98a563f2696cd47b`. Branch: **`submission-hardening`**, created directly from that baseline in `D:\Lean\jsp-000513-cleanroom\repo`. Neither `phase0-local` nor `cleanroom-verification` was modified. Baseline clean-room evidence was copied from `f7ef7477619b081aa43eacde99ae0f32638897ba`; it remains historical evidence for that proof version.
+Completed 2026-09-18 (Asia/Shanghai). Proof baseline: `83644d1838aadee8fc7acd9150c610aff5402ba7`. Branch: **`submission-hardening`**, created directly from that baseline in `D:\Lean\jsp-000513-cleanroom\repo`. Neither `phase0-local` nor `cleanroom-verification` was modified. Baseline clean-room evidence was copied from `c8b1f7cc5fdef20a06d3f6a886681ae2443cb992`; it remains historical evidence for that proof version.
 
 ## Changes and mathematical preservation
 
@@ -74,9 +74,12 @@ Build completed at 07:53:12+08:00, fresh replay at 08:00:48+08:00. Each required
 
 The current [official contribution instructions](https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md#external-solver-and-lean-submissions), [claim form](https://github.com/TheJustinSunPrize/awards/blob/main/.github/ISSUE_TEMPLATE/claim-award.yml), and [attribution process](https://github.com/TheJustinSunPrize/awards/blob/main/docs/attribution.md#claiming-an-award) were read on 2026-09-18. Their downloaded content hashes are recorded. The checklist distinguishes catalog evidence (public source, branch, full SHA, theorem/file/build/attribution) from the later self-claim (entry/repository links, consented public email, true contribution role and related claims).
 
-No known Lean build or theorem blocker remains. Remaining human/external gates are:
+No known Lean build or theorem blocker remains.
 
-- **LICENSE:** choose approved code/documentation scopes and notices. Apache-2.0 is recommended; MIT is an alternative. The publisher identifies DHS19 as CC BY 4.0, distinct from the arXiv distribution permission. See the recommendation for scope and risks.
+License selection is complete: **Apache-2.0** is adopted in the root LICENSE. Third-party terms remain applicable; see LICENSE_RECOMMENDATION.md. This is no longer a release blocker.
+
+Remaining human/external gates are:
+
 - **Public visibility:** separate approval and anonymous accessibility check are still required. GitHub metadata confirmed owner yqian215-arch, private visibility, and push permission before publication of this private branch.
 - **Public correspondence email:** not selected; must be supplied/approved by the user.
 - **Formal catalog PR and claim issue:** separate approvals; no proxy or mathematical-author claim is supported by this project's evidence.
@@ -84,12 +87,12 @@ No known Lean build or theorem blocker remains. Remaining human/external gates a
 
 ## Durable checkpoint and final pin
 
-Checkpoint commits: initialization `a91c8d0`, verified code stage `6cef517`. Each contains the then-current report/evidence. The candidate source/documentation commit is **405b3a7cb332bfd28a8205d76d80b39165203e2b**; the full pin and branch containment are recorded after it is created. A later evidence-only commit can record that SHA without a self-referential commit hash.
+Checkpoint commits: initialization `d2018998079ebe36e74da8a6bd30479d5d6b4d42`, verified code stage `bbc9dcf35216341bb24931be8dceeb36a113fcec`. Each contains the then-current report/evidence. The earlier verified source/documentation commit is **cae0bc9db1f0ecf8c6fbb3ab2c5ed1c07a4fae68** (a historical reference; see PUBLICATION_CANDIDATE.md for the frozen publication candidate). Its pin and branch containment were recorded at that stage. The final publication SHA is recorded externally after the documentation-cleanup commit; no additional content commit is needed.
 
-All authorized engineering work is complete. Exact continuation: read this report and SUBMISSION_CHECKLIST.md, obtain the remaining user decisions, then apply only the approved license/publication/submission actions. Do not redo the proof or silently change the baseline. Any later Lean or lockfile changes require appropriate renewed validation.
+All authorized engineering work is complete. Exact continuation: read this report and SUBMISSION_CHECKLIST.md, obtain the remaining user decisions, then apply only the approved publication/submission actions. License selection is already complete. Do not redo the proof or silently change the baseline. Any later Lean or lockfile changes require appropriate renewed validation.
 
 Operational issues resolved without source repair: a combined edit/build call was rejected by automatic policy review, so edits were applied as explicit patches and the build run separately; the patch tool rejected a same-call delete/add of README, resolved by separate operations; an official-repository Git metadata probe timed out while the official raw file downloads succeeded. None was a theorem failure.
 
-## Private remote confirmation
+## Historical private remote confirmation (before publication-document cleanup)
 
-The private submission-hardening branch was pushed and its remote tip was confirmed as `96285bc4defbeab71c11ff224890e16204c8c47c`, matching local HEAD at that check. It contains the selected source candidate `405b3a7cb332bfd28a8205d76d80b39165203e2b`; no Lean/lockfile changes followed that candidate. The next checkpoint commit only records this verification. `phase0-local` and `cleanroom-verification` still point to their original SHAs. See `submission-evidence/remote-verification.txt`. Public-facing document links were checked successfully; no candidate-SHA placeholder remains in current documentation.
+The private submission-hardening branch was pushed and its remote tip was confirmed as `d93382d1de2db8dda451f49c53aaaeac88653c25`, matching local HEAD at that check. It contains the selected source candidate `cae0bc9db1f0ecf8c6fbb3ab2c5ed1c07a4fae68`; no Lean/lockfile changes followed that candidate. The next checkpoint commit only records this verification. These historical refs are expressed using the post-email-rewrite SHA mapping. Their file trees were unchanged by the metadata rewrite. See `submission-evidence/remote-verification.txt`. Public-facing document links were checked successfully; no candidate-SHA placeholder remains in current documentation.

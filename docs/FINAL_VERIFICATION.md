@@ -33,9 +33,9 @@ JSP000513.finitePaletteEquivalence : JSP000513.FinitePaletteEquivalenceTarget
 
 ## 保存与边界
 
-主定理首次本地提交 `363d59f`；此前 G4、G5 检查点分别 `f15efde`、`7e9ec59`。最终提交还包含调色板桥梁及本文。当前分支为 phase0-local，最终远端状态由完成后的本地／远端提交哈希核对记录。
+主定理首次本地提交 `b66f1eda7a2de086993981e26abe112b9b8fb03f`；此前 G4、G5 检查点分别 `3d038a3cb659f48ee2106bbd3df8e4c1445b42af`、`b352060da80a8ca5058d9ea59b9f66c28d8bc895`。最终提交还包含调色板桥梁及本文。当前分支为 phase0-local，最终远端状态由完成后的本地／远端提交哈希核对记录。
 
 没有公开仓库、创建公开证明记录或提交官方奖项。官方审核与奖项资格不在这次本地形式化完成声明内。早期 Phase 0 报告为历史记录；无尚缺的主定理证明依赖。
 
 
-最终远程核对（2026-09-18）：GitHub API 确认仓库 Private；完整成果提交 79076f593efaba56923ffaeef2de935757090e3b 已与远端 phase0-local 一致。后续提交仅记录此确认。
+最终远程核对（2026-09-18）：GitHub API 确认仓库 Private；完整成果提交 bb09c6ceed0202204e2a1927d7bde5ff91a9f2b8 已与远端 phase0-local 一致。后续提交仅记录此确认。
