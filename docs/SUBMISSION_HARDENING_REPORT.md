@@ -84,7 +84,7 @@ No known Lean build or theorem blocker remains. Remaining human/external gates a
 
 ## Durable checkpoint and final pin
 
-Checkpoint commits: initialization `a91c8d0`, verified code stage `6cef517`. Each contains the then-current report/evidence. The candidate source/documentation commit is **PENDING_FINAL_SOURCE_COMMIT**; the full pin and branch containment are recorded after it is created. A later evidence-only commit can record that SHA without a self-referential commit hash.
+Checkpoint commits: initialization `a91c8d0`, verified code stage `6cef517`. Each contains the then-current report/evidence. The candidate source/documentation commit is **405b3a7cb332bfd28a8205d76d80b39165203e2b**; the full pin and branch containment are recorded after it is created. A later evidence-only commit can record that SHA without a self-referential commit hash.
 
 All authorized engineering work is complete. Exact continuation: read this report and SUBMISSION_CHECKLIST.md, obtain the remaining user decisions, then apply only the approved license/publication/submission actions. Do not redo the proof or silently change the baseline. Any later Lean or lockfile changes require appropriate renewed validation.
 

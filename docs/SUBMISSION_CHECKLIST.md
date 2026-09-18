@@ -16,7 +16,7 @@ Downloaded copies of the first three were read; their hashes are in `submission-
 - Original repository: `https://github.com/yqian215-arch/jsp-000513-lean`
 - Submission branch: **`submission-hardening`**.
 - Original verified proof baseline: **`8496ddb257bbdd9948417d3a98a563f2696cd47b`**.
-- Hardened source candidate (full 40-character SHA): **PENDING_FINAL_SOURCE_COMMIT**. Filled after the source/documentation commit; later evidence-only commits do not change that candidate's Lean code.
+- Hardened source candidate (full 40-character SHA): **405b3a7cb332bfd28a8205d76d80b39165203e2b**. Filled after the source/documentation commit; later evidence-only commits do not change that candidate's Lean code.
 - Direct theorem: **`JSP000513.list_choosability_doubling_is_false`**, `JSP000513/Problem.lean`.
 - Same finite witness: **`JSP000513.theorem2`**, `JSP000513/MainTheorem.lean`.
 - Build: `lake build` from the repository root; fixed versions and no-download-cache instructions are in README.
@@ -28,7 +28,7 @@ Downloaded copies of the first three were read; their hashes are in `submission-
 | Complete answer to the original problem | PASS | The finite (4:1)/(8:2) counterexample negates the proposed universal doubling rule. Wrapper is derived directly from theorem2 with the same n,G. |
 | Complete proof, no missing-proof assumptions | PASS | Baseline two-layer verification; current build, root/standalone wrapper audits, production scan and regression recorded in hardening report. |
 | Public, accessible original Lean source | TODO — user decision | Repository remains Private. No visibility change is authorized. Verify anonymous access to the selected SHA after an approved publication. |
-| Named branch contains selected SHA | PASS after final pin | Branch is submission-hardening; final pin is recorded below and checked as an ancestor of its remote tip. Do not replace it with a short SHA or only a branch URL. |
+| Named branch contains selected SHA | PASS | Branch is submission-hardening; final pin is recorded below and checked as an ancestor of its remote tip. Do not replace it with a short SHA or only a branch URL. |
 | Theorem/file and build instructions | PASS | Coordinates above and English README, lean-toolchain, locked manifest. |
 | Formalization attribution | Prepared; official review pending | ATTRIBUTION.md separates DHS19 authors, yqian215-arch's actual project role, and extensive ChatGPT Work/Codex assistance. No claim of line-by-line manual authorship or mathematical authorship by the applicant. |
 | Owner equals submitting GitHub account | Owner confirmed; applicant action TODO | GitHub reports owner yqian215-arch. Any claim must be submitted by that same account for its own actual contribution; no proxy submission. No issue has yet been filed, so issue-author identity cannot be pre-verified. |

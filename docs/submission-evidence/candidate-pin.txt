@@ -1,0 +1,2 @@
+candidate=405b3a7cb332bfd28a8205d76d80b39165203e2b; local_branch_contains_candidate_exit=0
+candidate_source_diff_exit=0
